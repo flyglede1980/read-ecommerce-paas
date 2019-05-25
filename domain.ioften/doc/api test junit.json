@@ -1,0 +1,5496 @@
+{
+	"info": {
+		"_postman_id": "7b2518a5-a648-4810-a68f-ec185d9943dd",
+		"name": "iOften",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "通用",
+			"item": [
+				{
+					"name": "http://127.0.0.1:8080/code",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "code",
+									"value": "101011",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "13102393339",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/code",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"code"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/code/{mark}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/code/13102393339",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"code",
+								"13102393339"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/cobjs/parse",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/cobjs/parse?path=my/idcard.jpg&path=qrcode/yt.png&path=qrcode/MWTTVV&path=my/1041794429293166592/identify/1543214794609_0",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"cobjs",
+								"parse"
+							],
+							"query": [
+								{
+									"key": "path",
+									"value": "my/idcard.jpg"
+								},
+								{
+									"key": "path",
+									"value": "qrcode/yt.png"
+								},
+								{
+									"key": "path",
+									"value": "qrcode/MWTTVV"
+								},
+								{
+									"key": "path",
+									"value": "my/1041794429293166592/identify/1543214794609_0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/cobjs?path=my/idcard.png",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/cobjs?path=_/my/idcard.jpg",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"cobjs"
+							],
+							"query": [
+								{
+									"key": "path",
+									"value": "_/my/idcard.jpg"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/cobjs?path=header/1041794429293166592",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/cobjs?path=header/1041794429293166592",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"cobjs"
+							],
+							"query": [
+								{
+									"key": "path",
+									"value": "header/1041794429293166592"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/qrcode?pixels={pixels}&format={format}&data={data}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/qrcode?pixels=320&format=jpeg&data=http://www.yitun.net",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"qrcode"
+							],
+							"query": [
+								{
+									"key": "pixels",
+									"value": "320"
+								},
+								{
+									"key": "format",
+									"value": "jpeg"
+								},
+								{
+									"key": "data",
+									"value": "http://www.yitun.net"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/check/pwd",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "passwd",
+									"value": "aBc147-47",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/check/pwd",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"check",
+								"pwd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/check/islogin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjpudWxsLCJhdWQiOiIxMDQxNzk0NDI5MjkzMTY2NTkyIiwibmJmIjoxNTQyMTk3NjYwLCJyb2xlcyI6IlVTRVIiLCJpc3MiOiJ0Yi5jbiIsImlkIjoiMTA0MTc5NDQyOTI5MzE2NjU5MiIsImV4cCI6MTU1Nzc0OTY2MCwiaWF0IjoxNTQyMTk3NjYwfQ.Daqy9wJkJBJ7G30cFwHyVRPsp0vYX7uvVC12TyubCro",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/check/islogin",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"check",
+								"islogin"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "后台",
+			"item": [
+				{
+					"name": "http://127.0.0.1:8080/slogin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjoic3UiLCJzdWIiOiJzdSIsImF1ZCI6IjAiLCJuYmYiOjE1NDIxODE1OTgsInJvbGVzIjoiQURNSU4sU1lTVEVNIiwiaXNzIjoidGIuY24iLCJpZCI6IjAiLCJleHAiOjE1NTc3MzM1OTgsImlhdCI6MTU0MjE4MTU5OH0.ppqBQdxGepcttlRt6phZmy2AEQ98RQQ8aSqOOOMhJmQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"account\": \"admin\",\r\n  \"passwd\": \"123456\"\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/slogin",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"slogin"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "http://127.0.0.1:8080/slogin",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"account\": \"su\",\r\n  \"passwd\": \"123456\"\r\n}"
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/slogin",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"slogin"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjoic3UiLCJzdWIiOiJzdSIsImF1ZCI6IjAiLCJuYmYiOjE1NDIxODYxNjMsInJvbGVzIjoiQURNSU4sU1lTVEVNIiwiaXNzIjoidGIuY24iLCJpZCI6IjAiLCJleHAiOjE1NTc3MzgxNjMsImlhdCI6MTU0MjE4NjE2M30.oO5ZA-hje8waEOQ9pY9zIdRiaKTJafOAGTiZ65aL5B8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-store"
+								},
+								{
+									"key": "Access-Control-Expose-Headers",
+									"value": "Authorization"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "35"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 14 Nov 2018 09:02:44 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"etimes\": 1542186112032\n}\n"
+						}
+					]
+				},
+				{
+					"name": "http://127.0.0.1:8080/sys/my",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjoic3UiLCJzdWIiOiJzdSIsImF1ZCI6IjAiLCJuYmYiOjE1NDIxODYxNjMsInJvbGVzIjoiQURNSU4sU1lTVEVNIiwiaXNzIjoidGIuY24iLCJpZCI6IjAiLCJleHAiOjE1NTc3MzgxNjMsImlhdCI6MTU0MjE4NjE2M30.oO5ZA-hje8waEOQ9pY9zIdRiaKTJafOAGTiZ65aL5B8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/sys/my",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"sys",
+								"my"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/sys/config",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjoic3UiLCJzdWIiOiJzdSIsImF1ZCI6IjAiLCJuYmYiOjE1NDIxODYxNjMsInJvbGVzIjoiQURNSU4sU1lTVEVNIiwiaXNzIjoidGIuY24iLCJpZCI6IjAiLCJleHAiOjE1NTc3MzgxNjMsImlhdCI6MTU0MjE4NjE2M30.oO5ZA-hje8waEOQ9pY9zIdRiaKTJafOAGTiZ65aL5B8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"code\": \"test\",\n    \"name\": \"Demo配置\",\n    \"scope\": \"ALL\",\n    \"value\": \"test ...\",\n    \"remark\": \"Demo配置描述信息 ...\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/sys/config",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"sys",
+								"config"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/sys/configs",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjoic3UiLCJzdWIiOiJzdSIsImF1ZCI6IjAiLCJuYmYiOjE1NDIxODYxNjMsInJvbGVzIjoiQURNSU4sU1lTVEVNIiwiaXNzIjoidGIuY24iLCJpZCI6IjAiLCJleHAiOjE1NTc3MzgxNjMsImlhdCI6MTU0MjE4NjE2M30.oO5ZA-hje8waEOQ9pY9zIdRiaKTJafOAGTiZ65aL5B8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"code\": \"app.version\",\r\n  \"scope\": \"APP\",\r\n  \"value\": \"{'ios':'0.0.1', 'apk':'0.0.1', 'btime':'20181101010203001'}}\"\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/sys/configs?modifier=admin&modifierId=0&scope=ALL&scope=SYS&stime=2018-11-01 17:27:50&etime=2019-12-31 23:59:59&pageSize=0",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"sys",
+								"configs"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1050402909591699456",
+									"disabled": true
+								},
+								{
+									"key": "code",
+									"value": "test",
+									"disabled": true
+								},
+								{
+									"key": "modifier",
+									"value": "admin"
+								},
+								{
+									"key": "modifierId",
+									"value": "0"
+								},
+								{
+									"key": "scope",
+									"value": "ALL"
+								},
+								{
+									"key": "scope",
+									"value": "SYS"
+								},
+								{
+									"key": "stime",
+									"value": "2018-11-01 17:27:50"
+								},
+								{
+									"key": "etime",
+									"value": "2019-12-31 23:59:59"
+								},
+								{
+									"key": "pageSize",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/sys/config/app.conf",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"code\": \"test\",\r\n  \"scope\": \"APP\",\r\n  \"value\": \"123456\"\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/sys/config/app.conf",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"sys",
+								"config",
+								"app.conf"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/sys/config/bycode/app.conf",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"code\": \"test\",\r\n  \"scope\": \"APP\",\r\n  \"value\": \"123456\"\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/sys/config/bycode/app.conf",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"sys",
+								"config",
+								"bycode",
+								"app.conf"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/sys/config?id=1039598492516876288&id=1039598459415429120",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjoic3UiLCJzdWIiOiJzdSIsImF1ZCI6IjAiLCJuYmYiOjE1NDIxODE1OTgsInJvbGVzIjoiQURNSU4sU1lTVEVNIiwiaXNzIjoidGIuY24iLCJpZCI6IjAiLCJleHAiOjE1NTc3MzM1OTgsImlhdCI6MTU0MjE4MTU5OH0.ppqBQdxGepcttlRt6phZmy2AEQ98RQQ8aSqOOOMhJmQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/sys/config?id=1039598459415429121&id=1050402909591699456",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"sys",
+								"config"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1039598459415429121"
+								},
+								{
+									"key": "id",
+									"value": "1050402909591699456"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "127.0.0.1:8080/sys/issue",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjoic3UiLCJzdWIiOiJzdSIsImF1ZCI6IjAiLCJuYmYiOjE1NDQwNjU3MDUsInJvbGVzIjoiQURNSU4sU1lTVEVNIiwiaXNzIjoidGIuY24iLCJpZCI6IjAiLCJleHAiOjE1NTk2MTc3MDUsImlhdCI6MTU0NDA2NTcwNX0.FdBj5-M7NxOqBvtWX043Sc_i8zIXoETkfWvJTg8R1t0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "127.0.0.1:8080/sys/issue?id=11",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"sys",
+								"issue"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "11"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "127.0.0.1:8080/sys/issues",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjoic3UiLCJzdWIiOiJzdSIsImF1ZCI6IjAiLCJuYmYiOjE1NDQwNjU3MDUsInJvbGVzIjoiQURNSU4sU1lTVEVNIiwiaXNzIjoidGIuY24iLCJpZCI6IjAiLCJleHAiOjE1NTk2MTc3MDUsImlhdCI6MTU0NDA2NTcwNX0.FdBj5-M7NxOqBvtWX043Sc_i8zIXoETkfWvJTg8R1t0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "127.0.0.1:8080/sys/issues?pageNo=1",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"sys",
+								"issues"
+							],
+							"query": [
+								{
+									"key": "pageNo",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "用户",
+			"item": [
+				{
+					"name": "http://127.0.0.1:8080/login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"phone\": 13123456789,\r\n  \"passwd\": \"aBc13123456789\"\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "http://127.0.0.1:8080/login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"phone\": 13123456789,\r\n  \"passwd\": \"aBc13123456789\",\r\n  \"captcha\": \"1010\"\r\n}"
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/login",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjpudWxsLCJhdWQiOiIxMDQxNzk0NDI5MjkzMTY2NTkyIiwibmJmIjoxNTQyMTk3NjYwLCJyb2xlcyI6IlVTRVIiLCJpc3MiOiJ0Yi5jbiIsImlkIjoiMTA0MTc5NDQyOTI5MzE2NjU5MiIsImV4cCI6MTU1Nzc0OTY2MCwiaWF0IjoxNTQyMTk3NjYwfQ.Daqy9wJkJBJ7G30cFwHyVRPsp0vYX7uvVC12TyubCro"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-store"
+								},
+								{
+									"key": "Access-Control-Expose-Headers",
+									"value": "Authorization"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "35"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 14 Nov 2018 12:14:20 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"etimes\": 1542197138110\n}"
+						}
+					]
+				},
+				{
+					"name": "http://127.0.0.1:8080/signup",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"phone\": 13302312345,\n  \"passwd\": \"aBc13123456788\",\n  \"captcha\": \"1010\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/signup",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/login/bysms",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"phone\": 13123456789,\r\n  \"captcha\": \"1010\"\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/login/bysms",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"login",
+								"bysms"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/login/losepwd",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"phone\": 13123456789,\r\n  \"passwd\": \"aBc13123456789\",\r\n  \"captcha\": \"1010\"\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/login/losepwd",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"login",
+								"losepwd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/crm/my",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjpudWxsLCJhdWQiOiIxMDQxNzk0NDI5MjkzMTY2NTkyIiwibmJmIjoxNTQyMTk3NjYwLCJyb2xlcyI6IlVTRVIiLCJpc3MiOiJ0Yi5jbiIsImlkIjoiMTA0MTc5NDQyOTI5MzE2NjU5MiIsImV4cCI6MTU1Nzc0OTY2MCwiaWF0IjoxNTQyMTk3NjYwfQ.Daqy9wJkJBJ7G30cFwHyVRPsp0vYX7uvVC12TyubCro",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/crm/my",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"crm",
+								"my"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/crm/users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjoic3UiLCJzdWIiOiJzdSIsImF1ZCI6IjAiLCJuYmYiOjE1NDIxODYxNjMsInJvbGVzIjoiQURNSU4sU1lTVEVNIiwiaXNzIjoidGIuY24iLCJpZCI6IjAiLCJleHAiOjE1NTc3MzgxNjMsImlhdCI6MTU0MjE4NjE2M30.oO5ZA-hje8waEOQ9pY9zIdRiaKTJafOAGTiZ65aL5B8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/crm/users?pageSize=10&sexs=N,F,M&levels=N,VIP1,VIP2&types=N,PE,EN,EW&statuss=ENABLE,DISABLE",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"crm",
+								"users"
+							],
+							"query": [
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "sexs",
+									"value": "N,F,M"
+								},
+								{
+									"key": "levels",
+									"value": "N,VIP1,VIP2"
+								},
+								{
+									"key": "types",
+									"value": "N,PE,EN,EW"
+								},
+								{
+									"key": "statuss",
+									"value": "ENABLE,DISABLE"
+								},
+								{
+									"key": "id",
+									"value": "1041794429293166592",
+									"disabled": true
+								},
+								{
+									"key": "nick",
+									"value": "LiuuHong",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": "欧阳吹雪雪雪",
+									"disabled": true
+								},
+								{
+									"key": "city",
+									"value": "重庆",
+									"disabled": true
+								},
+								{
+									"key": "phone",
+									"value": "13123456789",
+									"disabled": true
+								},
+								{
+									"key": "idcard",
+									"value": "500102198712095590",
+									"disabled": true
+								},
+								{
+									"key": "invite",
+									"value": "MWTTVV",
+									"disabled": true
+								},
+								{
+									"key": "device",
+									"value": "D00123",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/crm/user/pwd",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjpudWxsLCJhdWQiOiIxMDQxNzk0NDI5MjkzMTY2NTkyIiwibmJmIjoxNTQyMTk3NjYwLCJyb2xlcyI6IlVTRVIiLCJpc3MiOiJ0Yi5jbiIsImlkIjoiMTA0MTc5NDQyOTI5MzE2NjU5MiIsImV4cCI6MTU1Nzc0OTY2MCwiaWF0IjoxNTQyMTk3NjYwfQ.Daqy9wJkJBJ7G30cFwHyVRPsp0vYX7uvVC12TyubCro",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"passwd\": \"aBc13123456789\",\r\n  \"newPasswd\": \"aBc13123456789\"\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/crm/user/pwd",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"crm",
+								"user",
+								"pwd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/crm/my/safety",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjpudWxsLCJhdWQiOiIxMDQxNzk0NDI5MjkzMTY2NTkyIiwibmJmIjoxNTQyMTk3NjYwLCJyb2xlcyI6IlVTRVIiLCJpc3MiOiJ0Yi5jbiIsImlkIjoiMTA0MTc5NDQyOTI5MzE2NjU5MiIsImV4cCI6MTU1Nzc0OTY2MCwiaWF0IjoxNTQyMTk3NjYwfQ.Daqy9wJkJBJ7G30cFwHyVRPsp0vYX7uvVC12TyubCro",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/crm/my/safety",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"crm",
+								"my",
+								"safety"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/crm/user/phone",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjpudWxsLCJhdWQiOiIxMDQxNzk0NDI5MjkzMTY2NTkyIiwibmJmIjoxNTQyMTk3NjYwLCJyb2xlcyI6IlVTRVIiLCJpc3MiOiJ0Yi5jbiIsImlkIjoiMTA0MTc5NDQyOTI5MzE2NjU5MiIsImV4cCI6MTU1Nzc0OTY2MCwiaWF0IjoxNTQyMTk3NjYwfQ.Daqy9wJkJBJ7G30cFwHyVRPsp0vYX7uvVC12TyubCro",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"phone\": 13123456789,\r\n  \"captcha\": \"1010\"\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/crm/user/phone",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"crm",
+								"user",
+								"phone"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/crm/user/paypwd",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjpudWxsLCJhdWQiOiIxMDQxNzk0NDI5MjkzMTY2NTkyIiwibmJmIjoxNTQyMTk3NjYwLCJyb2xlcyI6IlVTRVIiLCJpc3MiOiJ0Yi5jbiIsImlkIjoiMTA0MTc5NDQyOTI5MzE2NjU5MiIsImV4cCI6MTU1Nzc0OTY2MCwiaWF0IjoxNTQyMTk3NjYwfQ.Daqy9wJkJBJ7G30cFwHyVRPsp0vYX7uvVC12TyubCro",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"captcha\": 1010,\r\n  \"payPasswd\": \"13123456789\"\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/crm/user/paypwd",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"crm",
+								"user",
+								"paypwd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/crm/user/datum",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjpudWxsLCJhdWQiOiIxMDQxNzk0NDI5MjkzMTY2NTkyIiwibmJmIjoxNTQyMTk3NjYwLCJyb2xlcyI6IlVTRVIiLCJpc3MiOiJ0Yi5jbiIsImlkIjoiMTA0MTc5NDQyOTI5MzE2NjU5MiIsImV4cCI6MTU1Nzc0OTY2MCwiaWF0IjoxNTQyMTk3NjYwfQ.Daqy9wJkJBJ7G30cFwHyVRPsp0vYX7uvVC12TyubCro",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"sex\": \"M\",\r\n  \"city\": \"北京\",\r\n  \"nick\": \"LiuuHong\",\r\n  \"header\": \"header.png\",\r\n  \"intro\": \"IT DEV\",\r\n  \"device\": \"D00123\",\r\n  \"birthday\": \"2018-10-16\"\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/crm/user/datum",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"crm",
+								"user",
+								"datum"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/crm/user/status",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjoic3UiLCJzdWIiOiJzdSIsImF1ZCI6IjAiLCJuYmYiOjE1NDMwNTM1OTQsInJvbGVzIjoiQURNSU4sU1lTVEVNIiwiaXNzIjoidGIuY24iLCJpZCI6IjAiLCJleHAiOjE1NTg2MDU1OTQsImlhdCI6MTU0MzA1MzU5NH0.7xLY5FFaEABp1yTmhNnn_bE4a4LmjFbPuJ4eDmMQfs8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ids\": [\r\n        1042829330423480320,1042829395640713216\r\n    ],\r\n    \"status\": \"ENABLE\",\r\n    \"remark\": \"\"\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/crm/user/status",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"crm",
+								"user",
+								"status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/crm/user/1041794429293166592",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjoic3UiLCJzdWIiOiJzdSIsImF1ZCI6IjAiLCJuYmYiOjE1NDIxODYxNjMsInJvbGVzIjoiQURNSU4sU1lTVEVNIiwiaXNzIjoidGIuY24iLCJpZCI6IjAiLCJleHAiOjE1NTc3MzgxNjMsImlhdCI6MTU0MjE4NjE2M30.oO5ZA-hje8waEOQ9pY9zIdRiaKTJafOAGTiZ65aL5B8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/crm/user/1041794429293166592",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"crm",
+								"user",
+								"1041794429293166592"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/crm/identity",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjpudWxsLCJhdWQiOiIxMDQxNzk0NDI5MjkzMTY2NTkyIiwibmJmIjoxNTQyMTk3NjYwLCJyb2xlcyI6IlVTRVIiLCJpc3MiOiJ0Yi5jbiIsImlkIjoiMTA0MTc5NDQyOTI5MzE2NjU5MiIsImV4cCI6MTU1Nzc0OTY2MCwiaWF0IjoxNTQyMTk3NjYwfQ.Daqy9wJkJBJ7G30cFwHyVRPsp0vYX7uvVC12TyubCro",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"captcha\": \"1010\",\r\n  \"passwd\": \"aBc1310239339\",\r\n  \"phone\": \"13102393339\"\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/crm/identity",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"crm",
+								"identity"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/crm/identity",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjpudWxsLCJhdWQiOiIxMDQxNzk0NDI5MjkzMTY2NTkyIiwibmJmIjoxNTQyMTk3NjYwLCJyb2xlcyI6IlVTRVIiLCJpc3MiOiJ0Yi5jbiIsImlkIjoiMTA0MTc5NDQyOTI5MzE2NjU5MiIsImV4cCI6MTU1Nzc0OTY2MCwiaWF0IjoxNTQyMTk3NjYwfQ.Daqy9wJkJBJ7G30cFwHyVRPsp0vYX7uvVC12TyubCro",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"evidences\": [\r\n    \"1.png\",\"2.png\",\"3.png\"\r\n  ],\r\n  \"idcard\": \"110101199003074856\",\r\n  \"name\": \"欧阳吹雪雪雪\",\r\n  \"nick\": \"吹雪雪雪\",\r\n  \"phone\": 13123456789,\r\n  \"type\": \"PE\"\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/crm/identity",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"crm",
+								"identity"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/crm/identity/review",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjoic3UiLCJzdWIiOiJzdSIsImF1ZCI6IjAiLCJuYmYiOjE1NDIxODYxNjMsInJvbGVzIjoiQURNSU4sU1lTVEVNIiwiaXNzIjoidGIuY24iLCJpZCI6IjAiLCJleHAiOjE1NTc3MzgxNjMsImlhdCI6MTU0MjE4NjE2M30.oO5ZA-hje8waEOQ9pY9zIdRiaKTJafOAGTiZ65aL5B8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 1041794429293166592,\r\n  \"status\": \"APPROVE\",\r\n  \"auditRemark\": \"通过\"\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/crm/identity/review",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"crm",
+								"identity",
+								"review"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/crm/identitys",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjoic3UiLCJzdWIiOiJzdSIsImF1ZCI6IjAiLCJuYmYiOjE1NDIxODYxNjMsInJvbGVzIjoiQURNSU4sU1lTVEVNIiwiaXNzIjoidGIuY24iLCJpZCI6IjAiLCJleHAiOjE1NTc3MzgxNjMsImlhdCI6MTU0MjE4NjE2M30.oO5ZA-hje8waEOQ9pY9zIdRiaKTJafOAGTiZ65aL5B8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 1041807954937905152,\r\n  \"status\": \"NEW\",\r\n  \"auditRemark\": \"string\"\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/crm/identitys?types=N,PE,EN&statuss=NEW,REFUSE,APPROVE",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"crm",
+								"identitys"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1041794429293166592",
+									"disabled": true
+								},
+								{
+									"key": "uid",
+									"value": "1041794429293166592",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": "欧阳吹雪雪雪",
+									"disabled": true
+								},
+								{
+									"key": "phone",
+									"value": "13123456789",
+									"disabled": true
+								},
+								{
+									"key": "types",
+									"value": "N,PE,EN"
+								},
+								{
+									"key": "statuss",
+									"value": "NEW,REFUSE,APPROVE"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/crm/identity/1041794429293166592",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjoic3UiLCJzdWIiOiJzdSIsImF1ZCI6IjAiLCJuYmYiOjE1NDMyMTU3MDQsInJvbGVzIjoiQURNSU4sU1lTVEVNIiwiaXNzIjoidGIuY24iLCJpZCI6IjAiLCJleHAiOjE1NTg3Njc3MDQsImlhdCI6MTU0MzIxNTcwNH0.e26w2a89IDDOkIITDxtK5OXEeDkx4e_0j22Gx3_MYQw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/crm/identity/1041794429293166592",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"crm",
+								"identity",
+								"1041794429293166592"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/crm/invite",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjpudWxsLCJhdWQiOiIxMDQxNzk0NDI5MjkzMTY2NTkyIiwibmJmIjoxNTQyMTk3NjYwLCJyb2xlcyI6IlVTRVIiLCJpc3MiOiJ0Yi5jbiIsImlkIjoiMTA0MTc5NDQyOTI5MzE2NjU5MiIsImV4cCI6MTU1Nzc0OTY2MCwiaWF0IjoxNTQyMTk3NjYwfQ.Daqy9wJkJBJ7G30cFwHyVRPsp0vYX7uvVC12TyubCro",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://127.0.0.1:8080/crm/invite",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"crm",
+								"invite"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/crm/invite",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"code\": \"AVAATQ\",\r\n  \"phone\": \"13123456789\"\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/crm/invite",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"crm",
+								"invite"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/crm/invites",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjpudWxsLCJhdWQiOiIxMDQxNzk0NDI5MjkzMTY2NTkyIiwibmJmIjoxNTQyMTk3NjYwLCJyb2xlcyI6IlVTRVIiLCJpc3MiOiJ0Yi5jbiIsImlkIjoiMTA0MTc5NDQyOTI5MzE2NjU5MiIsImV4cCI6MTU1Nzc0OTY2MCwiaWF0IjoxNTQyMTk3NjYwfQ.Daqy9wJkJBJ7G30cFwHyVRPsp0vYX7uvVC12TyubCro",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://127.0.0.1:8080/crm/invites?phone=",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"crm",
+								"invites"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1041794429293166512",
+									"disabled": true
+								},
+								{
+									"key": "uid",
+									"value": "1042829330423480320",
+									"disabled": true
+								},
+								{
+									"key": "phone",
+									"value": ""
+								},
+								{
+									"key": "nick",
+									"value": "SU",
+									"disabled": true
+								},
+								{
+									"key": "statuss",
+									"value": "LOGING,SIGNUP",
+									"disabled": true
+								},
+								{
+									"key": "pageSize",
+									"value": "10",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/crm/invite/mytotal",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjpudWxsLCJhdWQiOiIxMDQxNzk0NDI5MjkzMTY2NTkyIiwibmJmIjoxNTQyMTk3NjYwLCJyb2xlcyI6IlVTRVIiLCJpc3MiOiJ0Yi5jbiIsImlkIjoiMTA0MTc5NDQyOTI5MzE2NjU5MiIsImV4cCI6MTU1Nzc0OTY2MCwiaWF0IjoxNTQyMTk3NjYwfQ.Daqy9wJkJBJ7G30cFwHyVRPsp0vYX7uvVC12TyubCro",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/crm/invite/mytotal",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"crm",
+								"invite",
+								"mytotal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/crm/shield",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjpudWxsLCJhdWQiOiIxMDQxNzk0NDI5MjkzMTY2NTkyIiwibmJmIjoxNTQyMTk3NjYwLCJyb2xlcyI6IlVTRVIiLCJpc3MiOiJ0Yi5jbiIsImlkIjoiMTA0MTc5NDQyOTI5MzE2NjU5MiIsImV4cCI6MTU1Nzc0OTY2MCwiaWF0IjoxNTQyMTk3NjYwfQ.Daqy9wJkJBJ7G30cFwHyVRPsp0vYX7uvVC12TyubCro",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://127.0.0.1:8080/crm/shield/1041794429293166591",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"crm",
+								"shield",
+								"1041794429293166591"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/crm/shield",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjpudWxsLCJhdWQiOiIxMDQxNzk0NDI5MjkzMTY2NTkyIiwibmJmIjoxNTQyMTk3NjYwLCJyb2xlcyI6IlVTRVIiLCJpc3MiOiJ0Yi5jbiIsImlkIjoiMTA0MTc5NDQyOTI5MzE2NjU5MiIsImV4cCI6MTU1Nzc0OTY2MCwiaWF0IjoxNTQyMTk3NjYwfQ.Daqy9wJkJBJ7G30cFwHyVRPsp0vYX7uvVC12TyubCro",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://127.0.0.1:8080/crm/shield?id=1042832454156550144,1042830303531368448,1042831930493501440,1046089791831015424",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"crm",
+								"shield"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1042832454156550144,1042830303531368448,1042831930493501440,1046089791831015424"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/crm/shields",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjpudWxsLCJhdWQiOiIxMDQxNzk0NDI5MjkzMTY2NTkyIiwibmJmIjoxNTQyMTk3NjYwLCJyb2xlcyI6IlVTRVIiLCJpc3MiOiJ0Yi5jbiIsImlkIjoiMTA0MTc5NDQyOTI5MzE2NjU5MiIsImV4cCI6MTU1Nzc0OTY2MCwiaWF0IjoxNTQyMTk3NjYwfQ.Daqy9wJkJBJ7G30cFwHyVRPsp0vYX7uvVC12TyubCro",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://127.0.0.1:8080/crm/shields",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"crm",
+								"shields"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/crm/mesg",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjpudWxsLCJhdWQiOiIxMDQxNzk0NDI5MjkzMTY2NTkyIiwibmJmIjoxNTQyMTk3NjYwLCJyb2xlcyI6IlVTRVIiLCJpc3MiOiJ0Yi5jbiIsImlkIjoiMTA0MTc5NDQyOTI5MzE2NjU5MiIsImV4cCI6MTU1Nzc0OTY2MCwiaWF0IjoxNTQyMTk3NjYwfQ.Daqy9wJkJBJ7G30cFwHyVRPsp0vYX7uvVC12TyubCro",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://127.0.0.1:8080/crm/mesg?id=1041794429293166591&id=1054034491892301824",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"crm",
+								"mesg"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1041794429293166591"
+								},
+								{
+									"key": "id",
+									"value": "1054034491892301824"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/crm/mesgs",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjpudWxsLCJhdWQiOiIxMDQxNzk0NDI5MjkzMTY2NTkyIiwibmJmIjoxNTQyMTk3NjYwLCJyb2xlcyI6IlVTRVIiLCJpc3MiOiJ0Yi5jbiIsImlkIjoiMTA0MTc5NDQyOTI5MzE2NjU5MiIsImV4cCI6MTU1Nzc0OTY2MCwiaWF0IjoxNTQyMTk3NjYwfQ.Daqy9wJkJBJ7G30cFwHyVRPsp0vYX7uvVC12TyubCro",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://127.0.0.1:8080/crm/mesgs",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"crm",
+								"mesgs"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "ENJOY",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/crm/mesg/1054034491892301824",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjpudWxsLCJhdWQiOiIxMDQxNzk0NDI5MjkzMTY2NTkyIiwibmJmIjoxNTQyMTk3NjYwLCJyb2xlcyI6IlVTRVIiLCJpc3MiOiJ0Yi5jbiIsImlkIjoiMTA0MTc5NDQyOTI5MzE2NjU5MiIsImV4cCI6MTU1Nzc0OTY2MCwiaWF0IjoxNTQyMTk3NjYwfQ.Daqy9wJkJBJ7G30cFwHyVRPsp0vYX7uvVC12TyubCro",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://127.0.0.1:8080/crm/mesg/1054034491892301824",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"crm",
+								"mesg",
+								"1054034491892301824"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/crm/mesg/mytotal",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjpudWxsLCJhdWQiOiIxMDQxNzk0NDI5MjkzMTY2NTkyIiwibmJmIjoxNTQyMTk3NjYwLCJyb2xlcyI6IlVTRVIiLCJpc3MiOiJ0Yi5jbiIsImlkIjoiMTA0MTc5NDQyOTI5MzE2NjU5MiIsImV4cCI6MTU1Nzc0OTY2MCwiaWF0IjoxNTQyMTk3NjYwfQ.Daqy9wJkJBJ7G30cFwHyVRPsp0vYX7uvVC12TyubCro",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://127.0.0.1:8080/crm/mesg/mytotal",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"crm",
+								"mesg",
+								"mytotal"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "资讯",
+			"item": [
+				{
+					"name": "设置",
+					"item": [
+						{
+							"name": "http://127.0.0.1:8080/cms/conf",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjoic3UiLCJzdWIiOiJzdSIsImF1ZCI6IjAiLCJuYmYiOjE1NDM5MDQ2NzQsInJvbGVzIjoiQURNSU4sU1lTVEVNIiwiaXNzIjoidGIuY24iLCJpZCI6IjAiLCJleHAiOjE1NTk0NTY2NzQsImlhdCI6MTU0MzkwNDY3NH0.i5Eac0HDsLHc0FsI2E5wFqGb10obydEJKuX1euy4dSI",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/cms/conf",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"cms",
+										"conf"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:8080/cms/conf",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjoic3UiLCJzdWIiOiJzdSIsImF1ZCI6IjAiLCJuYmYiOjE1NDM5MDQ2NzQsInJvbGVzIjoiQURNSU4sU1lTVEVNIiwiaXNzIjoidGIuY24iLCJpZCI6IjAiLCJleHAiOjE1NTk0NTY2NzQsImlhdCI6MTU0MzkwNDY3NH0.i5Eac0HDsLHc0FsI2E5wFqGb10obydEJKuX1euy4dSI",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"advArticleEndSwitch\": true,\r\n  \"advFeePerClick\": 0.123,\r\n  \"advFeeRuleLock\": true,\r\n  \"advImageEndSwitch\": true,\r\n  \"advRecBannerSwitch\": true,\r\n  \"advRecNewsListSwitch\": true,\r\n  \"advShowFeePerMille\": 92233720368,\r\n  \"advStartupSwitch\": true,\r\n  \"advVideoPlayOverSwitch\": true,\r\n  \"articleEndRecSize\": 3,\r\n  \"imageEndRecSize\": 5,\r\n  \"recTopics\": [{\r\n      \"id\": 1046882084909481986,\r\n      \"name\": \"VI\"\r\n    },{\r\n      \"id\": 1046869027512647680,\r\n      \"name\": \"策划\"\r\n    },{\r\n      \"id\": 1046870057621127168,\r\n      \"name\": \"企服\"\r\n    },{\r\n      \"id\": 1046870393568100352,\r\n      \"name\": \"品牌\"\r\n    },{\r\n      \"id\": 1046870425180569601,\r\n      \"name\": \"公关\"\r\n    },{\r\n      \"id\": 1046881453830307846,\r\n      \"name\": \"专利\"\r\n    },{\r\n      \"id\": 1046882084909481990,\r\n      \"name\": \"广告\"\r\n    },{\r\n      \"id\": 1046882084909481984,\r\n      \"name\": \"宣传\"\r\n    },{\r\n      \"id\": 1046882084909481985,\r\n      \"name\": \"导视\"\r\n    }],\r\n  \"initTopics\": [{\r\n      \"id\": 1046870393568100352,\r\n      \"name\": \"品牌\"\r\n    },{\r\n      \"id\": 1046869027512647680,\r\n      \"name\": \"策划\"\r\n    },{\r\n      \"id\": 1046870425180569601,\r\n      \"name\": \"公关\"\r\n    },{\r\n      \"id\": 1046882084909481985,\r\n      \"name\": \"导视\"\r\n    },{\r\n      \"id\": 1046882084909481990,\r\n      \"name\": \"广告\"\r\n    },{\r\n      \"id\": 1046881453830307846,\r\n      \"name\": \"专利\"\r\n    }],\r\n  \"totopNews\": [{\r\n      \"id\": 1039598459415428201,\r\n      \"title\": \"测试文章AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\",\r\n      \"author\": \"测试作者AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\",\r\n      \"issueTime\": \"2018-12-04 08:38:16\"\r\n    },{\r\n      \"id\": 1039598459415428202,\r\n      \"title\": \"测试文章BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB\",\r\n      \"author\": \"测试作者BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB\",\r\n      \"issueTime\": \"2018-12-04 08:38:16\"\r\n    }\r\n  ],\r\n  \"showSize\": 10\r\n}"
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/cms/conf",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"cms",
+										"conf"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:8080/cms/my/topic",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/cms/my/topic",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"cms",
+										"my",
+										"topic"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:8080/cms/my/topic logined",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjoiTGl1dUhvbmciLCJzdWIiOiJMaXV1SG9uZyIsImF1ZCI6IjEwNDE3OTQ0MjkyOTMxNjY1OTIiLCJuYmYiOjE1NDM5MjIxNDIsInJvbGVzIjoiVVNFUixVU0VSLVBFIiwiaXNzIjoidGIuY24iLCJpZCI6IjEwNDE3OTQ0MjkyOTMxNjY1OTIiLCJleHAiOjE1NTk0NzQxNDIsImlhdCI6MTU0MzkyMjE0Mn0.NDROjn4bDvxudE0vbIgrm6xcv_R5h_dlRinnhKPDlUs",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/cms/my/topic",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"cms",
+										"my",
+										"topic"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:8080/cms/my/topics",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjoiTGl1dUhvbmciLCJzdWIiOiJMaXV1SG9uZyIsImF1ZCI6IjEwNDE3OTQ0MjkyOTMxNjY1OTIiLCJuYmYiOjE1NDM5MjIxNDIsInJvbGVzIjoiVVNFUixVU0VSLVBFIiwiaXNzIjoidGIuY24iLCJpZCI6IjEwNDE3OTQ0MjkyOTMxNjY1OTIiLCJleHAiOjE1NTk0NzQxNDIsImlhdCI6MTU0MzkyMjE0Mn0.NDROjn4bDvxudE0vbIgrm6xcv_R5h_dlRinnhKPDlUs",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/cms/my/topics",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"cms",
+										"my",
+										"topics"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:8080/cms/my/topics",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjoiTGl1dUhvbmciLCJzdWIiOiJMaXV1SG9uZyIsImF1ZCI6IjEwNDE3OTQ0MjkyOTMxNjY1OTIiLCJuYmYiOjE1NDM5MjIxNDIsInJvbGVzIjoiVVNFUixVU0VSLVBFIiwiaXNzIjoidGIuY24iLCJpZCI6IjEwNDE3OTQ0MjkyOTMxNjY1OTIiLCJleHAiOjE1NTk0NzQxNDIsImlhdCI6MTU0MzkyMjE0Mn0.NDROjn4bDvxudE0vbIgrm6xcv_R5h_dlRinnhKPDlUs",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[{\r\n    \"id\": \"1046882084909481986\",\r\n    \"name\": \"VI\"\r\n},{\r\n    \"id\": \"1046870057621127168\",\r\n    \"name\": \"企服\"\r\n}]"
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/cms/my/topics",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"cms",
+										"my",
+										"topics"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "挖矿",
+					"item": [
+						{
+							"name": "http://127.0.0.1:8080/cms/view/{aid}",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjpudWxsLCJhdWQiOiIxMDQxNzk0NDI5MjkzMTY2NTkyIiwibmJmIjoxNTQyMTk3NjYwLCJyb2xlcyI6IlVTRVIiLCJpc3MiOiJ0Yi5jbiIsImlkIjoiMTA0MTc5NDQyOTI5MzE2NjU5MiIsImV4cCI6MTU1Nzc0OTY2MCwiaWF0IjoxNTQyMTk3NjYwfQ.Daqy9wJkJBJ7G30cFwHyVRPsp0vYX7uvVC12TyubCro",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/cms/view/1053005109094514688",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"cms",
+										"view",
+										"1053005109094514688"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:8080/cms/view/{aid}",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjpudWxsLCJhdWQiOiIxMDQxNzk0NDI5MjkzMTY2NTkyIiwibmJmIjoxNTQyMTk3NjYwLCJyb2xlcyI6IlVTRVIiLCJpc3MiOiJ0Yi5jbiIsImlkIjoiMTA0MTc5NDQyOTI5MzE2NjU5MiIsImV4cCI6MTU1Nzc0OTY2MCwiaWF0IjoxNTQyMTk3NjYwfQ.Daqy9wJkJBJ7G30cFwHyVRPsp0vYX7uvVC12TyubCro",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/cms/view/1053005109094514688",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"cms",
+										"view",
+										"1053005109094514688"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:8080/cms/enjoy/article/{aid}",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjpudWxsLCJhdWQiOiIxMDQxNzk0NDI5MjkzMTY2NTkyIiwibmJmIjoxNTQyMTk3NjYwLCJyb2xlcyI6IlVTRVIiLCJpc3MiOiJ0Yi5jbiIsImlkIjoiMTA0MTc5NDQyOTI5MzE2NjU5MiIsImV4cCI6MTU1Nzc0OTY2MCwiaWF0IjoxNTQyMTk3NjYwfQ.Daqy9wJkJBJ7G30cFwHyVRPsp0vYX7uvVC12TyubCro",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/cms/enjoy/article/1053005109094514688",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"cms",
+										"enjoy",
+										"article",
+										"1053005109094514688"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:8080/cms/share/show/{id}",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/cms/share/show/1055971374125809664",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"cms",
+										"share",
+										"show",
+										"1055971374125809664"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:8080/cms/share/by{way}/{aid}",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjpudWxsLCJhdWQiOiIxMDQxNzk0NDI5MjkzMTY2NTkyIiwibmJmIjoxNTQyMTk3NjYwLCJyb2xlcyI6IlVTRVIiLCJpc3MiOiJ0Yi5jbiIsImlkIjoiMTA0MTc5NDQyOTI5MzE2NjU5MiIsImV4cCI6MTU1Nzc0OTY2MCwiaWF0IjoxNTQyMTk3NjYwfQ.Daqy9wJkJBJ7G30cFwHyVRPsp0vYX7uvVC12TyubCro",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/cms/share/byWX/1053005109094514688",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"cms",
+										"share",
+										"byWX",
+										"1053005109094514688"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "http://127.0.0.1:8080/cms/cate",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjoic3UiLCJzdWIiOiJzdSIsImF1ZCI6IjAiLCJuYmYiOjE1NDIxODYxNjMsInJvbGVzIjoiQURNSU4sU1lTVEVNIiwiaXNzIjoidGIuY24iLCJpZCI6IjAiLCJleHAiOjE1NTc3MzgxNjMsImlhdCI6MTU0MjE4NjE2M30.oO5ZA-hje8waEOQ9pY9zIdRiaKTJafOAGTiZ65aL5B8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/cms/cate?id=1046882810939310080&id=1046882810939310081",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"cms",
+								"cate"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1046882810939310080"
+								},
+								{
+									"key": "id",
+									"value": "1046882810939310081"
+								},
+								{
+									"key": "id",
+									"value": "1046882916019208192",
+									"disabled": true
+								},
+								{
+									"key": "id",
+									"value": "1046882916019208193",
+									"disabled": true
+								},
+								{
+									"key": "id",
+									"value": "1046882916019208194",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/cms/cate",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjoic3UiLCJzdWIiOiJzdSIsImF1ZCI6IjAiLCJuYmYiOjE1NDIxODYxNjMsInJvbGVzIjoiQURNSU4sU1lTVEVNIiwiaXNzIjoidGIuY24iLCJpZCI6IjAiLCJleHAiOjE1NTc3MzgxNjMsImlhdCI6MTU0MjE4NjE2M30.oO5ZA-hje8waEOQ9pY9zIdRiaKTJafOAGTiZ65aL5B8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"parentId\": 0,\n\t\"names\": [\"测试A\",\"测试B\",\"测试C\",\"测试D\",\"测试E\",\"测试F\"],\n\t\"remark\": null,\n\t\"sequence\": null\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/cms/cate",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"cms",
+								"cate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/cms/cate",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjoic3UiLCJzdWIiOiJzdSIsImF1ZCI6IjAiLCJuYmYiOjE1NDIxODYxNjMsInJvbGVzIjoiQURNSU4sU1lTVEVNIiwiaXNzIjoidGIuY24iLCJpZCI6IjAiLCJleHAiOjE1NTc3MzgxNjMsImlhdCI6MTU0MjE4NjE2M30.oO5ZA-hje8waEOQ9pY9zIdRiaKTJafOAGTiZ65aL5B8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\":1046882810939310081,\n\t\"parentId\": 1046882292644970496,\n\t\"name\": \"测试AB...\",\n\t\"status\": \"ENABLE\",\n\t\"sequence\": 1200,\n\t\"remark\": \"测试备注...\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/cms/cate",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"cms",
+								"cate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/cms/cate/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/cms/cate/1046869027512647680",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"cms",
+								"cate",
+								"1046869027512647680"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/cms/cates",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/cms/cates?",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"cms",
+								"cates"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1046882916019208192",
+									"disabled": true
+								},
+								{
+									"key": "rootId",
+									"value": "1046882292644970496",
+									"disabled": true
+								},
+								{
+									"key": "parentId",
+									"value": "1046882810939310081",
+									"disabled": true
+								},
+								{
+									"key": "pageSize",
+									"value": "11",
+									"disabled": true
+								},
+								{
+									"key": "statuss",
+									"value": "DISABLE,ENABLE",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": "测试ABA",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/cms/cate/tree",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/cms/cate/tree?parentId=0",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"cms",
+								"cate",
+								"tree"
+							],
+							"query": [
+								{
+									"key": "parentId",
+									"value": "0"
+								},
+								{
+									"key": "parentId",
+									"value": "1046882292644970496",
+									"disabled": true
+								},
+								{
+									"key": "parentId",
+									"value": "1046882810939310080",
+									"disabled": true
+								},
+								{
+									"key": "parentId",
+									"value": "1046882810939310081",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/cms/article/{id}",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZCI6IjEiLCJuYmYiOjE1NDUxODQ4OTEsInJvbGVzIjoiQURNSU4sQURNSU4sU1lTVEVNIiwiaXNzIjoidGIuY24iLCJpZCI6IjEiLCJleHAiOjE1NjA3MzY4OTEsImlhdCI6MTU0NTE4NDg5MX0.3UuaueZe68GA5NXiDnlCIJbHYrxh2fz3tQMxeD61mO8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"code\": \"app.version\",\r\n  \"scope\": \"APP\",\r\n  \"value\": \"{'ios':'0.0.1', 'apk':'0.0.1', 'btime':'20181101010203001'}}\"\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/cms/article/1053005109094514688",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"cms",
+								"article",
+								"1053005109094514688"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/cms/browse",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjpudWxsLCJhdWQiOiIxMDQxNzk0NDI5MjkzMTY2NTkyIiwibmJmIjoxNTQyMTk3NjYwLCJyb2xlcyI6IlVTRVIiLCJpc3MiOiJ0Yi5jbiIsImlkIjoiMTA0MTc5NDQyOTI5MzE2NjU5MiIsImV4cCI6MTU1Nzc0OTY2MCwiaWF0IjoxNTQyMTk3NjYwfQ.Daqy9wJkJBJ7G30cFwHyVRPsp0vYX7uvVC12TyubCro",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/cms/browse?id=1056506836322091008",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"cms",
+								"browse"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1056506836322091008"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/cms/browses",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjpudWxsLCJhdWQiOiIxMDQxNzk0NDI5MjkzMTY2NTkyIiwibmJmIjoxNTQyMTk3NjYwLCJyb2xlcyI6IlVTRVIiLCJpc3MiOiJ0Yi5jbiIsImlkIjoiMTA0MTc5NDQyOTI5MzE2NjU5MiIsImV4cCI6MTU1Nzc0OTY2MCwiaWF0IjoxNTQyMTk3NjYwfQ.Daqy9wJkJBJ7G30cFwHyVRPsp0vYX7uvVC12TyubCro",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/cms/browses",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"cms",
+								"browses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/cms/browse/byarticle/{aid}",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjpudWxsLCJhdWQiOiIxMDQxNzk0NDI5MjkzMTY2NTkyIiwibmJmIjoxNTQyMTk3NjYwLCJyb2xlcyI6IlVTRVIiLCJpc3MiOiJ0Yi5jbiIsImlkIjoiMTA0MTc5NDQyOTI5MzE2NjU5MiIsImV4cCI6MTU1Nzc0OTY2MCwiaWF0IjoxNTQyMTk3NjYwfQ.Daqy9wJkJBJ7G30cFwHyVRPsp0vYX7uvVC12TyubCro",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/cms/browse/byarticle/1053005109094514688",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"cms",
+								"browse",
+								"byarticle",
+								"1053005109094514688"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/cms/favorite",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjpudWxsLCJhdWQiOiIxMDQxNzk0NDI5MjkzMTY2NTkyIiwibmJmIjoxNTQyMTk3NjYwLCJyb2xlcyI6IlVTRVIiLCJpc3MiOiJ0Yi5jbiIsImlkIjoiMTA0MTc5NDQyOTI5MzE2NjU5MiIsImV4cCI6MTU1Nzc0OTY2MCwiaWF0IjoxNTQyMTk3NjYwfQ.Daqy9wJkJBJ7G30cFwHyVRPsp0vYX7uvVC12TyubCro",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/cms/favorite?id=1055438415668969472",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"cms",
+								"favorite"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1055438415668969472"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/cms/favorites",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjpudWxsLCJhdWQiOiIxMDQxNzk0NDI5MjkzMTY2NTkyIiwibmJmIjoxNTQyMTk3NjYwLCJyb2xlcyI6IlVTRVIiLCJpc3MiOiJ0Yi5jbiIsImlkIjoiMTA0MTc5NDQyOTI5MzE2NjU5MiIsImV4cCI6MTU1Nzc0OTY2MCwiaWF0IjoxNTQyMTk3NjYwfQ.Daqy9wJkJBJ7G30cFwHyVRPsp0vYX7uvVC12TyubCro",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/cms/favorites",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"cms",
+								"favorites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/cms/favorite/{aid}",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjpudWxsLCJhdWQiOiIxMDQxNzk0NDI5MjkzMTY2NTkyIiwibmJmIjoxNTQyMTk3NjYwLCJyb2xlcyI6IlVTRVIiLCJpc3MiOiJ0Yi5jbiIsImlkIjoiMTA0MTc5NDQyOTI5MzE2NjU5MiIsImV4cCI6MTU1Nzc0OTY2MCwiaWF0IjoxNTQyMTk3NjYwfQ.Daqy9wJkJBJ7G30cFwHyVRPsp0vYX7uvVC12TyubCro",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/cms/favorite/1053005109094514688",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"cms",
+								"favorite",
+								"1053005109094514688"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "广告",
+			"item": [
+				{
+					"name": "http://127.0.0.1:8080/adv/adv",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjoic3UiLCJzdWIiOiJzdSIsImF1ZCI6IjAiLCJuYmYiOjE1NDQwNjU3MDUsInJvbGVzIjoiQURNSU4sU1lTVEVNIiwiaXNzIjoidGIuY24iLCJpZCI6IjAiLCJleHAiOjE1NTk2MTc3MDUsImlhdCI6MTU0NDA2NTcwNX0.FdBj5-M7NxOqBvtWX043Sc_i8zIXoETkfWvJTg8R1t0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"seat\": \"NEWS_LIST\",\r\n  \"action\": \"APP_DOWN\",\r\n  \"showBtn\": true,\r\n  \"title\": \"XXX APP\",\r\n  \"actionConf\": \"{'name':'XXX APP','pageUrl':'http://cjdev.net/adv.html','apkDownUrl':'http://cjdev.net/sdt_1.0.apk','iosDownUrl':'http://cjdev.net/ios'}\",\r\n  \"remark\": \"测试用途\",\r\n  \"status\": \"ENABLE\",\r\n  \"cover\": [\"1.png\", \"2.png\"]\r\n  \r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/adv/adv",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"adv",
+								"adv"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/adv/adv",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjoic3UiLCJzdWIiOiJzdSIsImF1ZCI6IjAiLCJuYmYiOjE1NDQwNjU3MDUsInJvbGVzIjoiQURNSU4sU1lTVEVNIiwiaXNzIjoidGIuY24iLCJpZCI6IjAiLCJleHAiOjE1NTk2MTc3MDUsImlhdCI6MTU0NDA2NTcwNX0.FdBj5-M7NxOqBvtWX043Sc_i8zIXoETkfWvJTg8R1t0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "1030062450776473600",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/adv/adv",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"adv",
+								"adv"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/adv/adv/1030062450776473600",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjoic3UiLCJzdWIiOiJzdSIsImF1ZCI6IjAiLCJuYmYiOjE1NDQwNjU3MDUsInJvbGVzIjoiQURNSU4sU1lTVEVNIiwiaXNzIjoidGIuY24iLCJpZCI6IjAiLCJleHAiOjE1NTk2MTc3MDUsImlhdCI6MTU0NDA2NTcwNX0.FdBj5-M7NxOqBvtWX043Sc_i8zIXoETkfWvJTg8R1t0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/adv/adv/1030062450776473600",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"adv",
+								"adv",
+								"1030062450776473600"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/adv/advs",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjoic3UiLCJzdWIiOiJzdSIsImF1ZCI6IjAiLCJuYmYiOjE1NDQwNjU3MDUsInJvbGVzIjoiQURNSU4sU1lTVEVNIiwiaXNzIjoidGIuY24iLCJpZCI6IjAiLCJleHAiOjE1NTk2MTc3MDUsImlhdCI6MTU0NDA2NTcwNX0.FdBj5-M7NxOqBvtWX043Sc_i8zIXoETkfWvJTg8R1t0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/adv/advs?",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"adv",
+								"advs"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1049701356916441088",
+									"disabled": true
+								},
+								{
+									"key": "title",
+									"value": "踩踩踩踩踩踩",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "DISABLE",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "ENABLE",
+									"disabled": true
+								},
+								{
+									"key": "showBtn",
+									"value": "true",
+									"disabled": true
+								},
+								{
+									"key": "action",
+									"value": "PAGE",
+									"disabled": true
+								},
+								{
+									"key": "action",
+									"value": "NEWS",
+									"disabled": true
+								},
+								{
+									"key": "seat",
+									"value": "BANNER",
+									"disabled": true
+								},
+								{
+									"key": "seat",
+									"value": "STARTUP",
+									"disabled": true
+								},
+								{
+									"key": "pageNo",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "pageSize",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/adv/flash",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/adv/flash",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"adv",
+								"flash"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/adv/banner",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/adv/banner",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"adv",
+								"banner"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "支付",
+			"item": [
+				{
+					"name": "设置",
+					"item": [
+						{
+							"name": "http://127.0.0.1:8080/pay/on",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/pay/on",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"pay",
+										"on"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:8080/sys/config pay.on",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjoic3UiLCJzdWIiOiJzdSIsImF1ZCI6IjAiLCJuYmYiOjE1NDIxODYxNjMsInJvbGVzIjoiQURNSU4sU1lTVEVNIiwiaXNzIjoidGIuY24iLCJpZCI6IjAiLCJleHAiOjE1NTc3MzgxNjMsImlhdCI6MTU0MjE4NjE2M30.oO5ZA-hje8waEOQ9pY9zIdRiaKTJafOAGTiZ65aL5B8",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"code\": \"pay.on\",\n    \"name\": \"支付开关\",\n    \"scope\": \"ALL\",\n    \"value\": \"ON\",\n    \"remark\": \"支付开关, 便于应用控制当前是否支持支付功能，ON: 表示已打开\"\n}"
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/sys/config",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"sys",
+										"config"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:8080/pay/rate",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/pay/rate",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"pay",
+										"rate"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:8080/pay/rate/refresh",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjoic3UiLCJzdWIiOiJzdSIsImF1ZCI6IjAiLCJuYmYiOjE1NDQwNjU3MDUsInJvbGVzIjoiQURNSU4sU1lTVEVNIiwiaXNzIjoidGIuY24iLCJpZCI6IjAiLCJleHAiOjE1NTk2MTc3MDUsImlhdCI6MTU0NDA2NTcwNX0.FdBj5-M7NxOqBvtWX043Sc_i8zIXoETkfWvJTg8R1t0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/pay/rate/refresh",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"pay",
+										"rate",
+										"refresh"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:8080/pay/conf/gain",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjoic3UiLCJzdWIiOiJzdSIsImF1ZCI6IjAiLCJuYmYiOjE1NDIxODYxNjMsInJvbGVzIjoiQURNSU4sU1lTVEVNIiwiaXNzIjoidGIuY24iLCJpZCI6IjAiLCJleHAiOjE1NTc3MzgxNjMsImlhdCI6MTU0MjE4NjE2M30.oO5ZA-hje8waEOQ9pY9zIdRiaKTJafOAGTiZ65aL5B8",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/pay/conf/gain",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"pay",
+										"conf",
+										"gain"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:8080/pay/conf/gain",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjoic3UiLCJzdWIiOiJzdSIsImF1ZCI6IjAiLCJuYmYiOjE1NDIxODYxNjMsInJvbGVzIjoiQURNSU4sU1lTVEVNIiwiaXNzIjoidGIuY24iLCJpZCI6IjAiLCJleHAiOjE1NTc3MzgxNjMsImlhdCI6MTU0MjE4NjE2M30.oO5ZA-hje8waEOQ9pY9zIdRiaKTJafOAGTiZ65aL5B8",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\n        \"handFee\": 0.01,\n        \"viewTime\": 3,\n        \"inviteCardinal\": 100000001,\n        \"viewCardinals\": [\n            20000000,\n            30000000\n        ],\n        \"enjoyCardinals\": [\n            30000000,\n            50000000\n        ],\n        \"shareCardinals\": [\n            60000000,\n            80000000\n        ],\n        \"gainConfRatios\": [\n            {\n                \"amount\": 20000000002,\n                \"ratio\": 1\n            },\n            {\n                \"amount\": 50000000001,\n                \"ratio\": 0.9\n            },\n            {\n                \"amount\": 100000000001,\n                \"ratio\": 0.8\n            },\n            {\n                \"amount\": 200000000001,\n                \"ratio\": 0.7\n            },\n            {\n                \"amount\": 500000000001,\n                \"ratio\": 0.6\n            },\n            {\n                \"amount\": 1000000000001,\n                \"ratio\": 0.5\n            }\n        ]\n    }"
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/pay/conf/gain",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"pay",
+										"conf",
+										"gain"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "http://127.0.0.1:8080/pay/flowss",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjpudWxsLCJhdWQiOiIxMDQxNzk0NDI5MjkzMTY2NTkyIiwibmJmIjoxNTQyMTk3NjYwLCJyb2xlcyI6IlVTRVIiLCJpc3MiOiJ0Yi5jbiIsImlkIjoiMTA0MTc5NDQyOTI5MzE2NjU5MiIsImV4cCI6MTU1Nzc0OTY2MCwiaWF0IjoxNTQyMTk3NjYwfQ.Daqy9wJkJBJ7G30cFwHyVRPsp0vYX7uvVC12TyubCro",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/pay/flowss?month=2018-12&way=VIEW&way=ADDED",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"pay",
+								"flowss"
+							],
+							"query": [
+								{
+									"key": "month",
+									"value": "2018-12"
+								},
+								{
+									"key": "way",
+									"value": "VIEW"
+								},
+								{
+									"key": "way",
+									"value": "ADDED"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/pay/flows/mytotal",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjpudWxsLCJhdWQiOiIxMDQxNzk0NDI5MjkzMTY2NTkyIiwibmJmIjoxNTQyMTk3NjYwLCJyb2xlcyI6IlVTRVIiLCJpc3MiOiJ0Yi5jbiIsImlkIjoiMTA0MTc5NDQyOTI5MzE2NjU5MiIsImV4cCI6MTU1Nzc0OTY2MCwiaWF0IjoxNTQyMTk3NjYwfQ.Daqy9wJkJBJ7G30cFwHyVRPsp0vYX7uvVC12TyubCro",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/pay/flows/mytotal?month=2018-12&way=VIEW",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"pay",
+								"flows",
+								"mytotal"
+							],
+							"query": [
+								{
+									"key": "month",
+									"value": "2018-12"
+								},
+								{
+									"key": "way",
+									"value": "VIEW"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/pay/wallet/my",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjpudWxsLCJhdWQiOiIxMDQxNzk0NDI5MjkzMTY2NTkyIiwibmJmIjoxNTQyMTk3NjYwLCJyb2xlcyI6IlVTRVIiLCJpc3MiOiJ0Yi5jbiIsImlkIjoiMTA0MTc5NDQyOTI5MzE2NjU5MiIsImV4cCI6MTU1Nzc0OTY2MCwiaWF0IjoxNTQyMTk3NjYwfQ.Daqy9wJkJBJ7G30cFwHyVRPsp0vYX7uvVC12TyubCro",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/pay/wallet/my",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"pay",
+								"wallet",
+								"my"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/pay/wallet/myboard",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjpudWxsLCJhdWQiOiIxMDQxNzk0NDI5MjkzMTY2NTkyIiwibmJmIjoxNTQyMTk3NjYwLCJyb2xlcyI6IlVTRVIiLCJpc3MiOiJ0Yi5jbiIsImlkIjoiMTA0MTc5NDQyOTI5MzE2NjU5MiIsImV4cCI6MTU1Nzc0OTY2MCwiaWF0IjoxNTQyMTk3NjYwfQ.Daqy9wJkJBJ7G30cFwHyVRPsp0vYX7uvVC12TyubCro",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/pay/wallet/myboard",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"pay",
+								"wallet",
+								"myboard"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/pay/ranks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/pay/ranks",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"pay",
+								"ranks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/pay/rank/my",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjpudWxsLCJhdWQiOiIxMDQxNzk0NDI5MjkzMTY2NTkyIiwibmJmIjoxNTQyMTk3NjYwLCJyb2xlcyI6IlVTRVIiLCJpc3MiOiJ0Yi5jbiIsImlkIjoiMTA0MTc5NDQyOTI5MzE2NjU5MiIsImV4cCI6MTU1Nzc0OTY2MCwiaWF0IjoxNTQyMTk3NjYwfQ.Daqy9wJkJBJ7G30cFwHyVRPsp0vYX7uvVC12TyubCro",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/pay/rank/my",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"pay",
+								"rank",
+								"my"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/pay/wallets",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjoic3UiLCJzdWIiOiJzdSIsImF1ZCI6IjAiLCJuYmYiOjE1NDIxODYxNjMsInJvbGVzIjoiQURNSU4sU1lTVEVNIiwiaXNzIjoidGIuY24iLCJpZCI6IjAiLCJleHAiOjE1NTc3MzgxNjMsImlhdCI6MTU0MjE4NjE2M30.oO5ZA-hje8waEOQ9pY9zIdRiaKTJafOAGTiZ65aL5B8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/pay/wallets?",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"pay",
+								"wallets"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1041794429293166592",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/pay/wallet/1041794429293166592",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjoic3UiLCJzdWIiOiJzdSIsImF1ZCI6IjAiLCJuYmYiOjE1NDIxODYxNjMsInJvbGVzIjoiQURNSU4sU1lTVEVNIiwiaXNzIjoidGIuY24iLCJpZCI6IjAiLCJleHAiOjE1NTc3MzgxNjMsImlhdCI6MTU0MjE4NjE2M30.oO5ZA-hje8waEOQ9pY9zIdRiaKTJafOAGTiZ65aL5B8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/pay/wallet/1041794429293166592",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"pay",
+								"wallet",
+								"1041794429293166592"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/pay/wallet/my",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjpudWxsLCJhdWQiOiIxMDQxNzk0NDI5MjkzMTY2NTkyIiwibmJmIjoxNTQyMTk3NjYwLCJyb2xlcyI6IlVTRVIiLCJpc3MiOiJ0Yi5jbiIsImlkIjoiMTA0MTc5NDQyOTI5MzE2NjU5MiIsImV4cCI6MTU1Nzc0OTY2MCwiaWF0IjoxNTQyMTk3NjYwfQ.Daqy9wJkJBJ7G30cFwHyVRPsp0vYX7uvVC12TyubCro",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/pay/wallet/my",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"pay",
+								"wallet",
+								"my"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8080/pay/wallet/myboard",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjpudWxsLCJhdWQiOiIxMDQxNzk0NDI5MjkzMTY2NTkyIiwibmJmIjoxNTQyMTk3NjYwLCJyb2xlcyI6IlVTRVIiLCJpc3MiOiJ0Yi5jbiIsImlkIjoiMTA0MTc5NDQyOTI5MzE2NjU5MiIsImV4cCI6MTU1Nzc0OTY2MCwiaWF0IjoxNTQyMTk3NjYwfQ.Daqy9wJkJBJ7G30cFwHyVRPsp0vYX7uvVC12TyubCro",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/pay/wallet/myboard",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"pay",
+								"wallet",
+								"myboard"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "test",
+			"item": [
+				{
+					"name": "http://api.cjdev.net/v1/login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"phone\": 13123456789,\r\n  \"passwd\": \"aBc13123456789\"\r\n}"
+						},
+						"url": {
+							"raw": "http://api.cjdev.net/v1/login",
+							"protocol": "http",
+							"host": [
+								"api",
+								"cjdev",
+								"net"
+							],
+							"path": [
+								"v1",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "http://127.0.0.1:8080/login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"phone\": 13123456789,\r\n  \"passwd\": \"aBc13123456789\",\r\n  \"captcha\": \"1010\"\r\n}"
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/login",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjpudWxsLCJhdWQiOiIxMDQxNzk0NDI5MjkzMTY2NTkyIiwibmJmIjoxNTQyMTk3NjYwLCJyb2xlcyI6IlVTRVIiLCJpc3MiOiJ0Yi5jbiIsImlkIjoiMTA0MTc5NDQyOTI5MzE2NjU5MiIsImV4cCI6MTU1Nzc0OTY2MCwiaWF0IjoxNTQyMTk3NjYwfQ.Daqy9wJkJBJ7G30cFwHyVRPsp0vYX7uvVC12TyubCro"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-store"
+								},
+								{
+									"key": "Access-Control-Expose-Headers",
+									"value": "Authorization"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "35"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 14 Nov 2018 12:14:20 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"etimes\": 1542197138110\n}"
+						}
+					]
+				},
+				{
+					"name": "http://api.cjdev.net/v1/crm/my",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjoiTGl1dUhvbmciLCJzdWIiOiJMaXV1SG9uZyIsImF1ZCI6IjEwNDE3OTQ0MjkyOTMxNjY1OTIiLCJuYmYiOjE1NDQxNjUyMjIsInJvbGVzIjoiVVNFUixVU0VSLVBFIiwiaXNzIjoidGIuY24iLCJpZCI6IjEwNDE3OTQ0MjkyOTMxNjY1OTIiLCJleHAiOjE1NTk3MTcyMjIsImlhdCI6MTU0NDE2NTIyMn0.MjVLXHLJWFTnwjwJiedeU3u0Va7yjXzsNQf10t2MWuk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"phone\": 13123456789,\r\n  \"passwd\": \"aBc13123456789\"\r\n}"
+						},
+						"url": {
+							"raw": "http://api.cjdev.net/v1/crm/my",
+							"protocol": "http",
+							"host": [
+								"api",
+								"cjdev",
+								"net"
+							],
+							"path": [
+								"v1",
+								"crm",
+								"my"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "http://127.0.0.1:8080/login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"phone\": 13123456789,\r\n  \"passwd\": \"aBc13123456789\",\r\n  \"captcha\": \"1010\"\r\n}"
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/login",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjpudWxsLCJhdWQiOiIxMDQxNzk0NDI5MjkzMTY2NTkyIiwibmJmIjoxNTQyMTk3NjYwLCJyb2xlcyI6IlVTRVIiLCJpc3MiOiJ0Yi5jbiIsImlkIjoiMTA0MTc5NDQyOTI5MzE2NjU5MiIsImV4cCI6MTU1Nzc0OTY2MCwiaWF0IjoxNTQyMTk3NjYwfQ.Daqy9wJkJBJ7G30cFwHyVRPsp0vYX7uvVC12TyubCro"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-store"
+								},
+								{
+									"key": "Access-Control-Expose-Headers",
+									"value": "Authorization"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "35"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 14 Nov 2018 12:14:20 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"etimes\": 1542197138110\n}"
+						}
+					]
+				},
+				{
+					"name": "http://api.cjdev.net/v1/cms/share/by{way}/{aid}",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjoiTGl1dUhvbmciLCJzdWIiOiJMaXV1SG9uZyIsImF1ZCI6IjEwNDE3OTQ0MjkyOTMxNjY1OTIiLCJuYmYiOjE1NDQxNjUyMjIsInJvbGVzIjoiVVNFUixVU0VSLVBFIiwiaXNzIjoidGIuY24iLCJpZCI6IjEwNDE3OTQ0MjkyOTMxNjY1OTIiLCJleHAiOjE1NTk3MTcyMjIsImlhdCI6MTU0NDE2NTIyMn0.MjVLXHLJWFTnwjwJiedeU3u0Va7yjXzsNQf10t2MWuk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"phone\": 13123456789,\r\n  \"passwd\": \"aBc13123456789\"\r\n}"
+						},
+						"url": {
+							"raw": "http://api.cjdev.net/v1/cms/share/byWX/1054755617090043904",
+							"protocol": "http",
+							"host": [
+								"api",
+								"cjdev",
+								"net"
+							],
+							"path": [
+								"v1",
+								"cms",
+								"share",
+								"byWX",
+								"1054755617090043904"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "http://127.0.0.1:8080/login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"phone\": 13123456789,\r\n  \"passwd\": \"aBc13123456789\",\r\n  \"captcha\": \"1010\"\r\n}"
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/login",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjpudWxsLCJhdWQiOiIxMDQxNzk0NDI5MjkzMTY2NTkyIiwibmJmIjoxNTQyMTk3NjYwLCJyb2xlcyI6IlVTRVIiLCJpc3MiOiJ0Yi5jbiIsImlkIjoiMTA0MTc5NDQyOTI5MzE2NjU5MiIsImV4cCI6MTU1Nzc0OTY2MCwiaWF0IjoxNTQyMTk3NjYwfQ.Daqy9wJkJBJ7G30cFwHyVRPsp0vYX7uvVC12TyubCro"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-store"
+								},
+								{
+									"key": "Access-Control-Expose-Headers",
+									"value": "Authorization"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "35"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 14 Nov 2018 12:14:20 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"etimes\": 1542197138110\n}"
+						}
+					]
+				},
+				{
+					"name": "http://api.cjdev.net/v1/pay/flowss",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjoiTGl1dUhvbmciLCJzdWIiOiJMaXV1SG9uZyIsImF1ZCI6IjEwNDE3OTQ0MjkyOTMxNjY1OTIiLCJuYmYiOjE1NDQxNjUyMjIsInJvbGVzIjoiVVNFUixVU0VSLVBFIiwiaXNzIjoidGIuY24iLCJpZCI6IjEwNDE3OTQ0MjkyOTMxNjY1OTIiLCJleHAiOjE1NTk3MTcyMjIsImlhdCI6MTU0NDE2NTIyMn0.MjVLXHLJWFTnwjwJiedeU3u0Va7yjXzsNQf10t2MWuk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"phone\": 13123456789,\r\n  \"passwd\": \"aBc13123456789\"\r\n}"
+						},
+						"url": {
+							"raw": "http://api.cjdev.net/v1/pay/flowss?month=2011-10&way=VIEW",
+							"protocol": "http",
+							"host": [
+								"api",
+								"cjdev",
+								"net"
+							],
+							"path": [
+								"v1",
+								"pay",
+								"flowss"
+							],
+							"query": [
+								{
+									"key": "month",
+									"value": "2011-10"
+								},
+								{
+									"key": "way",
+									"value": "VIEW"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "http://127.0.0.1:8080/login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"phone\": 13123456789,\r\n  \"passwd\": \"aBc13123456789\",\r\n  \"captcha\": \"1010\"\r\n}"
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/login",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjpudWxsLCJhdWQiOiIxMDQxNzk0NDI5MjkzMTY2NTkyIiwibmJmIjoxNTQyMTk3NjYwLCJyb2xlcyI6IlVTRVIiLCJpc3MiOiJ0Yi5jbiIsImlkIjoiMTA0MTc5NDQyOTI5MzE2NjU5MiIsImV4cCI6MTU1Nzc0OTY2MCwiaWF0IjoxNTQyMTk3NjYwfQ.Daqy9wJkJBJ7G30cFwHyVRPsp0vYX7uvVC12TyubCro"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-store"
+								},
+								{
+									"key": "Access-Control-Expose-Headers",
+									"value": "Authorization"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "35"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 14 Nov 2018 12:14:20 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"etimes\": 1542197138110\n}"
+						}
+					]
+				},
+				{
+					"name": "http://api.cjdev.net/v1/pay/flows/mytotal",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjoiTGl1dUhvbmciLCJzdWIiOiJMaXV1SG9uZyIsImF1ZCI6IjEwNDE3OTQ0MjkyOTMxNjY1OTIiLCJuYmYiOjE1NDQxNjUyMjIsInJvbGVzIjoiVVNFUixVU0VSLVBFIiwiaXNzIjoidGIuY24iLCJpZCI6IjEwNDE3OTQ0MjkyOTMxNjY1OTIiLCJleHAiOjE1NTk3MTcyMjIsImlhdCI6MTU0NDE2NTIyMn0.MjVLXHLJWFTnwjwJiedeU3u0Va7yjXzsNQf10t2MWuk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"phone\": 13123456789,\r\n  \"passwd\": \"aBc13123456789\"\r\n}"
+						},
+						"url": {
+							"raw": "http://api.cjdev.net/v1/pay/flows/mytotal?month=2017-12&way=VIEW",
+							"protocol": "http",
+							"host": [
+								"api",
+								"cjdev",
+								"net"
+							],
+							"path": [
+								"v1",
+								"pay",
+								"flows",
+								"mytotal"
+							],
+							"query": [
+								{
+									"key": "month",
+									"value": "2017-12"
+								},
+								{
+									"key": "way",
+									"value": "VIEW"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "http://127.0.0.1:8080/login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"phone\": 13123456789,\r\n  \"passwd\": \"aBc13123456789\",\r\n  \"captcha\": \"1010\"\r\n}"
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/login",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjpudWxsLCJhdWQiOiIxMDQxNzk0NDI5MjkzMTY2NTkyIiwibmJmIjoxNTQyMTk3NjYwLCJyb2xlcyI6IlVTRVIiLCJpc3MiOiJ0Yi5jbiIsImlkIjoiMTA0MTc5NDQyOTI5MzE2NjU5MiIsImV4cCI6MTU1Nzc0OTY2MCwiaWF0IjoxNTQyMTk3NjYwfQ.Daqy9wJkJBJ7G30cFwHyVRPsp0vYX7uvVC12TyubCro"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-store"
+								},
+								{
+									"key": "Access-Control-Expose-Headers",
+									"value": "Authorization"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "35"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 14 Nov 2018 12:14:20 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"etimes\": 1542197138110\n}"
+						}
+					]
+				},
+				{
+					"name": "http://api.cjdev.net/v1/pay/flows/mytotal",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjoiTGl1dUhvbmciLCJzdWIiOiJMaXV1SG9uZyIsImF1ZCI6IjEwNDE3OTQ0MjkyOTMxNjY1OTIiLCJuYmYiOjE1NDQxNjUyMjIsInJvbGVzIjoiVVNFUixVU0VSLVBFIiwiaXNzIjoidGIuY24iLCJpZCI6IjEwNDE3OTQ0MjkyOTMxNjY1OTIiLCJleHAiOjE1NTk3MTcyMjIsImlhdCI6MTU0NDE2NTIyMn0.MjVLXHLJWFTnwjwJiedeU3u0Va7yjXzsNQf10t2MWuk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"phone\": 13123456789,\r\n  \"passwd\": \"aBc13123456789\"\r\n}"
+						},
+						"url": {
+							"raw": "http://api.cjdev.net/v1/pay/flows/mytotal?month=2018-11&way=READ",
+							"protocol": "http",
+							"host": [
+								"api",
+								"cjdev",
+								"net"
+							],
+							"path": [
+								"v1",
+								"pay",
+								"flows",
+								"mytotal"
+							],
+							"query": [
+								{
+									"key": "month",
+									"value": "2018-11"
+								},
+								{
+									"key": "way",
+									"value": "READ"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "http://127.0.0.1:8080/login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"phone\": 13123456789,\r\n  \"passwd\": \"aBc13123456789\",\r\n  \"captcha\": \"1010\"\r\n}"
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/login",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjpudWxsLCJhdWQiOiIxMDQxNzk0NDI5MjkzMTY2NTkyIiwibmJmIjoxNTQyMTk3NjYwLCJyb2xlcyI6IlVTRVIiLCJpc3MiOiJ0Yi5jbiIsImlkIjoiMTA0MTc5NDQyOTI5MzE2NjU5MiIsImV4cCI6MTU1Nzc0OTY2MCwiaWF0IjoxNTQyMTk3NjYwfQ.Daqy9wJkJBJ7G30cFwHyVRPsp0vYX7uvVC12TyubCro"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-store"
+								},
+								{
+									"key": "Access-Control-Expose-Headers",
+									"value": "Authorization"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "35"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 14 Nov 2018 12:14:20 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"etimes\": 1542197138110\n}"
+						}
+					]
+				},
+				{
+					"name": "http://api.cjdev.net/v1/slogin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjoic3UiLCJzdWIiOiJzdSIsImF1ZCI6IjAiLCJuYmYiOjE1NDIxODE1OTgsInJvbGVzIjoiQURNSU4sU1lTVEVNIiwiaXNzIjoidGIuY24iLCJpZCI6IjAiLCJleHAiOjE1NTc3MzM1OTgsImlhdCI6MTU0MjE4MTU5OH0.ppqBQdxGepcttlRt6phZmy2AEQ98RQQ8aSqOOOMhJmQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"account\": \"su\",\r\n  \"passwd\": \"123456\"\r\n}"
+						},
+						"url": {
+							"raw": "http://api.cjdev.net/v1/slogin",
+							"protocol": "http",
+							"host": [
+								"api",
+								"cjdev",
+								"net"
+							],
+							"path": [
+								"v1",
+								"slogin"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "http://127.0.0.1:8080/slogin",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"account\": \"su\",\r\n  \"passwd\": \"123456\"\r\n}"
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/slogin",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"slogin"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjoic3UiLCJzdWIiOiJzdSIsImF1ZCI6IjAiLCJuYmYiOjE1NDIxODYxNjMsInJvbGVzIjoiQURNSU4sU1lTVEVNIiwiaXNzIjoidGIuY24iLCJpZCI6IjAiLCJleHAiOjE1NTc3MzgxNjMsImlhdCI6MTU0MjE4NjE2M30.oO5ZA-hje8waEOQ9pY9zIdRiaKTJafOAGTiZ65aL5B8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-store"
+								},
+								{
+									"key": "Access-Control-Expose-Headers",
+									"value": "Authorization"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "35"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 14 Nov 2018 09:02:44 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"etimes\": 1542186112032\n}\n"
+						}
+					]
+				},
+				{
+					"name": "http://api.cjdev.net/v1/pay/rate",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://api.cjdev.net/v1/pay/rate",
+							"protocol": "http",
+							"host": [
+								"api",
+								"cjdev",
+								"net"
+							],
+							"path": [
+								"v1",
+								"pay",
+								"rate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://api.cjdev.net/v1/cms/cate/tree",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://api.cjdev.net/v1/cms/cate/tree",
+							"protocol": "http",
+							"host": [
+								"api",
+								"cjdev",
+								"net"
+							],
+							"path": [
+								"v1",
+								"cms",
+								"cate",
+								"tree"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://api.cjdev.net/v1/cms/show/{id}",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZCI6IjEiLCJuYmYiOjE1NDUxODQ4OTEsInJvbGVzIjoiQURNSU4sQURNSU4sU1lTVEVNIiwiaXNzIjoidGIuY24iLCJpZCI6IjEiLCJleHAiOjE1NjA3MzY4OTEsImlhdCI6MTU0NTE4NDg5MX0.3UuaueZe68GA5NXiDnlCIJbHYrxh2fz3tQMxeD61mO8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"code\": \"app.version\",\r\n  \"scope\": \"APP\",\r\n  \"value\": \"{'ios':'0.0.1', 'apk':'0.0.1', 'btime':'20181101010203001'}}\"\r\n}"
+						},
+						"url": {
+							"raw": "http://api.cjdev.net/v1/cms/show/1053005109094514688",
+							"protocol": "http",
+							"host": [
+								"api",
+								"cjdev",
+								"net"
+							],
+							"path": [
+								"v1",
+								"cms",
+								"show",
+								"1053005109094514688"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://api.cjdev.net/v1/qrcode?pixels={pixels}&format={format}&data={data}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://api.cjdev.net/v1/qrcode?pixels=320&format=png&data=https://www.yitun.net",
+							"protocol": "http",
+							"host": [
+								"api",
+								"cjdev",
+								"net"
+							],
+							"path": [
+								"v1",
+								"qrcode"
+							],
+							"query": [
+								{
+									"key": "pixels",
+									"value": "320"
+								},
+								{
+									"key": "format",
+									"value": "png"
+								},
+								{
+									"key": "data",
+									"value": "https://www.yitun.net"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://api.cjdev.net/v1/cms/favorite/{aid}",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://api.cjdev.net/v1/cms/favorite/1053005109094514688",
+							"protocol": "http",
+							"host": [
+								"api",
+								"cjdev",
+								"net"
+							],
+							"path": [
+								"v1",
+								"cms",
+								"favorite",
+								"1053005109094514688"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "pord",
+			"item": [
+				{
+					"name": "https://api.changjianapp.com/v1/login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"phone\": 13123456789,\r\n  \"passwd\": \"aBc13123456789\"\r\n}"
+						},
+						"url": {
+							"raw": "https://api.changjianapp.com/v1/login",
+							"protocol": "https",
+							"host": [
+								"api",
+								"changjianapp",
+								"com"
+							],
+							"path": [
+								"v1",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "http://127.0.0.1:8080/login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"phone\": 13123456789,\r\n  \"passwd\": \"aBc13123456789\",\r\n  \"captcha\": \"1010\"\r\n}"
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/login",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjpudWxsLCJhdWQiOiIxMDQxNzk0NDI5MjkzMTY2NTkyIiwibmJmIjoxNTQyMTk3NjYwLCJyb2xlcyI6IlVTRVIiLCJpc3MiOiJ0Yi5jbiIsImlkIjoiMTA0MTc5NDQyOTI5MzE2NjU5MiIsImV4cCI6MTU1Nzc0OTY2MCwiaWF0IjoxNTQyMTk3NjYwfQ.Daqy9wJkJBJ7G30cFwHyVRPsp0vYX7uvVC12TyubCro"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-store"
+								},
+								{
+									"key": "Access-Control-Expose-Headers",
+									"value": "Authorization"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "35"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 14 Nov 2018 12:14:20 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"etimes\": 1542197138110\n}"
+						}
+					]
+				},
+				{
+					"name": "https://api.changjianapp.com/v1/signup",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"phone\": 13302312345,\n  \"passwd\": \"aBc13123456788\",\n  \"captcha\": \"1010\"\n}"
+						},
+						"url": {
+							"raw": "https://api.changjianapp.com/v1/signup",
+							"protocol": "https",
+							"host": [
+								"api",
+								"changjianapp",
+								"com"
+							],
+							"path": [
+								"v1",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://api.changjianapp.com/v1/crm/my",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjpudWxsLCJhdWQiOiIxMDQxNzk0NDI5MjkzMTY2NTkyIiwibmJmIjoxNTQyMTk3NjYwLCJyb2xlcyI6IlVTRVIiLCJpc3MiOiJ0Yi5jbiIsImlkIjoiMTA0MTc5NDQyOTI5MzE2NjU5MiIsImV4cCI6MTU1Nzc0OTY2MCwiaWF0IjoxNTQyMTk3NjYwfQ.Daqy9wJkJBJ7G30cFwHyVRPsp0vYX7uvVC12TyubCro",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://api.changjianapp.com/v1/crm/my",
+							"protocol": "https",
+							"host": [
+								"api",
+								"changjianapp",
+								"com"
+							],
+							"path": [
+								"v1",
+								"crm",
+								"my"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://api.changjianapp.com/v1/crm/user/datum",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJuaWNrIjpudWxsLCJhdWQiOiIxMDQxNzk0NDI5MjkzMTY2NTkyIiwibmJmIjoxNTQyMTk3NjYwLCJyb2xlcyI6IlVTRVIiLCJpc3MiOiJ0Yi5jbiIsImlkIjoiMTA0MTc5NDQyOTI5MzE2NjU5MiIsImV4cCI6MTU1Nzc0OTY2MCwiaWF0IjoxNTQyMTk3NjYwfQ.Daqy9wJkJBJ7G30cFwHyVRPsp0vYX7uvVC12TyubCro",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"sex\": \"M\",\r\n  \"city\": \"北京\",\r\n  \"nick\": \"LiuuHong\",\r\n  \"header\": \"header.png\",\r\n  \"intro\": \"IT DEV\",\r\n  \"device\": \"D00123\",\r\n  \"birthday\": \"2018-10-16\"\r\n}"
+						},
+						"url": {
+							"raw": "https://api.changjianapp.com/v1/crm/user/datum",
+							"protocol": "https",
+							"host": [
+								"api",
+								"changjianapp",
+								"com"
+							],
+							"path": [
+								"v1",
+								"crm",
+								"user",
+								"datum"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://api.changjianapp.com/v1/code",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "code",
+									"value": "101011",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "13102393339",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api.changjianapp.com/v1/code",
+							"protocol": "https",
+							"host": [
+								"api",
+								"changjianapp",
+								"com"
+							],
+							"path": [
+								"v1",
+								"code"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://api.changjianapp.com/v1/code/{mark}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://api.changjianapp.com/v1/code/13102393339",
+							"protocol": "https",
+							"host": [
+								"api",
+								"changjianapp",
+								"com"
+							],
+							"path": [
+								"v1",
+								"code",
+								"13102393339"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://api.changjianapp.com/v1/cms/show/author/1057959571487719424",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://api.changjianapp.com/v1/cms/show/author/1057959571487719424",
+							"protocol": "https",
+							"host": [
+								"api",
+								"changjianapp",
+								"com"
+							],
+							"path": [
+								"v1",
+								"cms",
+								"show",
+								"author",
+								"1057959571487719424"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://api.changjianapp.com/v1/qrcode?pixels={pixels}&format={format}&data={data}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://api.changjianapp.com/v1/qrcode?pixels=320&format=png&data=https://www.yitun.net",
+							"protocol": "https",
+							"host": [
+								"api",
+								"changjianapp",
+								"com"
+							],
+							"path": [
+								"v1",
+								"qrcode"
+							],
+							"query": [
+								{
+									"key": "pixels",
+									"value": "320"
+								},
+								{
+									"key": "format",
+									"value": "png"
+								},
+								{
+									"key": "data",
+									"value": "https://www.yitun.net"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

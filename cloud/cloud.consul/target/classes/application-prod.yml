@@ -1,0 +1,12 @@
+# Server
+server:
+  port: 6000
+  servlet:
+    context-path: /
+
+# Spring
+spring:
+  cloud:
+    consul:
+      port: 8500
+      host: 127.0.0.1

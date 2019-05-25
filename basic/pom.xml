@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<parent>
+		<groupId>net.yitun</groupId>
+		<artifactId>yitun</artifactId>
+		<version>0.0.1</version>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>basic</artifactId>
+	<packaging>pom</packaging>
+	<description>basic modules</description>
+
+	<modules>
+		<module>basic.core</module>
+		<module>basic.model</module>
+
+		<module>basic.amqp</module>
+		<module>basic.cache</module>
+		<module>basic.mybatis</module>
+		<module>basic.security</module>
+		<module>basic.swagger</module>
+
+		<module>basic.website</module>
+	</modules>
+
+</project>

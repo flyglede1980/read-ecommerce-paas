@@ -1,0 +1,11 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "net.yitun.ioften.pay.support.BlockSupport",
+      "name": "block",
+      "type": "net.yitun.ioften.pay.support.BlockSupport"
+    }
+  ],
+  "properties": []
+}

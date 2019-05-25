@@ -1,0 +1,119 @@
+# server
+server:
+  port: 81
+  servlet:
+    context-path: /v1
+
+# spring
+spring:
+  redis:
+    port: 6379
+    host: redis
+    password: redis@12l1
+    timeout: 3600s
+    database: 0
+  cache:
+    redis:
+      time-to-live: 72H
+
+  rabbitmq:
+    port: 5672
+    host: rabbitmq
+    username: cjapp
+    password: cjMq@12l1
+    virtual-host: /cjapp
+    publisher-returns: false
+    publisher-confirms: false
+    listener:
+      direct:
+        acknowledge-mode: MANUAL
+      simple:
+        acknowledge-mode: MANUAL
+
+  datasource: # DS
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://mysql:3306/cjapp?serverTimezone=PRC&useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&rewriteBatchedStatements=true&autoReconnct=true&autoReconnectForPools=true&useSSL=false
+    username: cjapp
+    password: cjDb@12l1
+    hikari:
+      pool-name: RWDB
+      minimum-idle: 64
+      maximum-pool-size: 128
+      idle-timeout: 30000
+      max-lifetime: 1800000
+      connection-timeout: 30000
+      connection-test-query: select 1
+mybatis:
+  configuration:
+    cache-enabled: true
+    default-statement-timeout: 5
+    map-underscore-to-camel-case: true
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: net.yitun.entity, net.yitun.**.entity
+pagehelper:
+  helper-dialect: mysql
+  params: count=count;orderBy=sortBy;pageNum=pageNo;pageSize=pageSize
+
+# logs
+logging:
+  file: 
+    max-size: 32MB
+    max-history: 92
+  path: logs/
+  pattern:
+    level: "[%5p]"
+    dateformat: "[MM-dd HH:mm:ss.SSS]"
+  level:
+    net:
+      yitun: DEBUG
+    org:
+      springframework: INFO
+      com:
+        obs: ERROR
+    root: INFO
+
+# basic
+basic:
+  sms:
+    yunpian:
+      host: https://sms.yunpian.com/v2/sms/single_send.json
+      apikey: 1adc400cdaf4f92214905b61703a15e0
+
+  qrcode:
+    logo-path: static/logo_qrcode.png
+
+  store:
+    bucket: cj-tmp
+    priv-classify: my,idcard,evidence
+    expire-time: 30
+    resure-times: 1
+    obs:
+      bucket: cj-priv
+      endpoint: obs.cn-north-1.myhwclouds.com
+      access-key: WEBNRIMVFF8GD8XLQLCC
+      access-secret: 6r2rCzcoo4PBbyIbGjkSdwQAR9Ho0EhJOJ6lV2bg
+      pub-bucket: cj-pub
+      pub-endpoint: ${basic.store.obs.endpoint}
+      pub-access-key: ${basic.store.obs.access-key}
+      pub-access-secret: ${basic.store.obs.access-secret}
+
+  code:
+    img-len: 6
+    img-ttl: 120
+    img-rate: 2
+    sms-len: 4
+    sms-ttl: 300
+    sms-rate: 30
+    sms-lock-ttl: 7200
+    sms-fire-lock-times: 10
+    sms-ignore-verify-times: 2
+    sms-tmpl: 【长鉴科技】您的验证码为：%s，请按页面提示填写，切勿泄露于他人。
+
+# block
+block:
+    host: http://block:7020
+    addr:
+      gas: SLUks2NRq1bGgv6ZHHPeMpZcRwyfD747wa57
+      collect: SLUks2NRq1bGgv6ZHHPeMpZcRwyfD747wa57
+      contract: 73b49ed1d8e343947028617f32b4a5e8c57e89c1

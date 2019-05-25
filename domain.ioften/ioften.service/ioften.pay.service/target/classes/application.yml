@@ -1,0 +1,6 @@
+block:
+    host: http://49.4.81.217:7020 # http://192.168.10.129:7020
+    addr:
+      gas: SLUks2NRq1bGgv6ZHHPeMpZcRwyfD747wa57
+      collect: SLUks2NRq1bGgv6ZHHPeMpZcRwyfD747wa57
+      contract: 73b49ed1d8e343947028617f32b4a5e8c57e89c1

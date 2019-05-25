@@ -1,0 +1,11 @@
+192.168.1.11 mysql
+192.168.1.11 mongodb
+192.168.1.11 kafka
+192.168.1.11 rabbitmq
+
+192.168.1.11 nginx
+192.168.1.11 eureka
+192.168.1.11 zipkin
+
+192.168.1.11 redis
+192.168.1.11 elasticsearch

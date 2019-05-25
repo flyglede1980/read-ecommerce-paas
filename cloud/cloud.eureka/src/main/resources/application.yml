@@ -1,0 +1,75 @@
+#公共配置信息
+server:
+  port: 8761
+spring:
+  profiles:  
+    active: dev, default
+  application:
+    name: cloud.eureka
+eureka:
+  server:
+    enable-self-preservation: true                #关闭保护机制，以确保注册中心可以将不可用的实例剔除.(注意：自我保护模式是一种应对网络异常的安全保护措施,使用自我保护模式，可以让Eureka集群更加的健壮、稳定)
+    eviction-interval-timer-in-ms: 30000        #eureka server清理无效节点的时间间隔，默认60000毫秒，即60秒
+    response-cache-update-interval-ms: 3000   # eureka server刷新readCacheMap的时间, 默认30s, 注意, client读取的是readCacheMap, 这个时间决定了多久会把readWriteCacheMap的缓存更新到readCacheMap上
+    response-cache-auto-expiration-in-seconds: 180    # eureka server缓存readWriteCacheMap失效时间, 默认180s, 这个只有在这个时间过去后缓存才会失效, 失效前不会更新, 过期后从registry重新读取注册服务信息, registry是一个ConcurrentHashMap。由于启用了evict其实就用不太上改这个配置了
+  instance:
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 5    # 服务刷新时间配置, 默认30s, 每隔这个时间会主动心跳一次
+    lease-expiration-duration-in-seconds: 15   # 服务过期时间配置, 默认90s, 超过这个时间没有接收到心跳EurekaServer就会将这个实例剔除,  注意, EurekaServer一定要设置eureka.server.eviction-interval-timer-in-ms否则这个配置无效, 这个配置一般为服务刷新时间配置的三倍
+logging:
+  pattern:
+    level: "[%5p]"
+    dateformat: "[MM-dd HH:mm:ss.SSS]"
+  level:
+    root: INFO
+
+#用---分割不同的环境的配置（YML以"---"作为分割符，以"..."作为结束标志）
+--- # dev, default
+spring:
+  profiles: dev
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+    fetch-registry: false
+    register-with-eureka: false # fetch-registry: false 和 register-with-eureka 表示是一个eureka注册中心
+  instance:
+    hostname: 127.0.0.1
+
+--- # node1
+spring:
+  profiles: node1
+eureka:
+  client:
+    service-url:
+      defaultZone: http://node2:${server.port:8761}/eureka/,http://node3:${server.port:8761}/eureka/
+    fetch-registry: true
+    register-with-eureka: true
+  instance:
+    hostname: node1
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port} 
+logging:
+  file: 
+    max-size: 32MB
+    max-history: 92
+  path: logs/${spring.application.name}/
+
+--- # node2
+spring:
+  profiles: node2
+eureka:
+  client:
+    service-url:
+      defaultZone: http://node1:${server.port:8761}/eureka/,http://node3:${server.port:8761}/eureka/
+    fetch-registry: true
+    register-with-eureka: true
+  instance:
+    hostname: node2
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port} 
+logging:
+  file: 
+    max-size: 32MB
+    max-history: 92
+  path: logs/${spring.application.name}/
+...

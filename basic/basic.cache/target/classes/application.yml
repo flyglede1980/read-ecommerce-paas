@@ -1,0 +1,13 @@
+spring:
+  redis: # Redis
+    port: 6379
+    host: redis.ytdev.org
+    password: 123456
+    timeout: 60s   # jedis 连接、读取超时 60秒; lettuce 读取超时
+    database: 0
+#    cluster:
+#      nodes: 10.3.1.2:6379,10.3.1.3:6379,...,10.3.1.255:6379
+  cache:
+    redis:
+      time-to-live: 3600s # 缓存TTL, 1小时
+    

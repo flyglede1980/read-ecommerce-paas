@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>ioften.api</artifactId>
+        <groupId>net.yitun</groupId>
+        <version>0.0.1</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>ioften.order.api</artifactId>
+    <packaging>jar</packaging>
+    <description>ioften.order.api module</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>net.yitun</groupId>
+            <artifactId>basic.model</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>net.yitun</groupId>
+            <artifactId>ioften.sys.api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>net.yitun</groupId>
+            <artifactId>ioften.crm.api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>net.yitun</groupId>
+            <artifactId>basic.core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
+</project>

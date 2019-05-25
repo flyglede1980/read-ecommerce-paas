@@ -1,0 +1,20 @@
+# Spring
+spring:
+  profiles:
+    active: dev
+
+  application:
+    name: ytdev.org
+
+springfox:
+  documentation:
+    swagger.v2.path: /
+
+info:
+  app:
+    name: ${spring.application.name}
+    profile: ${spring.profiles.active}
+    version: "0.0.1"
+    description: "basic.swagger public module"
+    spring-boot-version: "0.0.1"
+    api-doc-wiki: http://127.0.0.1:${server.port}/swagger-ui.html

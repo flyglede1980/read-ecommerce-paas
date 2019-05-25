@@ -1,0 +1,31 @@
+spring:
+  datasource: # DS
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://mysql.ytdev.org:3306/ioften?serverTimezone=PRC&useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&rewriteBatchedStatements=true&autoReconnct=true&autoReconnectForPools=true&useSSL=false
+    username: dev
+    password: 123456
+    hikari:
+      pool-name: RWDB
+      minimum-idle: 4
+      maximum-pool-size: 32
+      idle-timeout: 30000
+      max-lifetime: 1800000
+      connection-timeout: 30000
+      connection-test-query: select 1
+
+# Mybatis
+mybatis:
+  configuration:
+    cache-enabled: true
+    default-statement-timeout: 5
+    map-underscore-to-camel-case: true
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: net.yitun.entity, net.yitun.**.entity
+  
+# Pagehelper
+pagehelper:
+  helper-dialect: mysql
+  params: count=count;orderBy=sortBy;pageNum=pageNo;pageSize=pageSize
+  # com.github.pagehelper.page.PageParams
+  # params: 可以配置pageNum,pageSize,count,pageSizeZero,reasonable,orderBy,不配置映射的用默认值

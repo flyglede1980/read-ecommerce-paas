@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<parent>
+		<groupId>net.yitun</groupId>
+		<artifactId>domains</artifactId>
+		<version>0.0.1</version>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>domains.comon.service</artifactId>
+	<packaging>jar</packaging>
+	<description>domains.comon.service module</description>
+
+	<properties>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>net.yitun</groupId>
+			<artifactId>basic.core</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>net.yitun</groupId>
+			<artifactId>basic.cache</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>net.yitun</groupId>
+			<artifactId>basic.security</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>net.yitun</groupId>
+			<artifactId>domains.comon.api</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.squareup.okhttp3</groupId>
+			<artifactId>okhttp</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.code.kaptcha</groupId>
+			<artifactId>kaptcha</artifactId>
+		</dependency>
+
+		<dependency> <!-- https://mvnrepository.com/artifact/com.yunpian.sdk/yunpian-java-sdk -->
+			<groupId>com.yunpian.sdk</groupId>
+			<artifactId>yunpian-java-sdk</artifactId>
+			<version>${yunpian-java-sdk}</version> <!-- $NO-MVN-MAN-VER$ -->
+		</dependency>
+
+		<dependency> <!-- https://support.huaweicloud.com/devg-obs_java_sdk_doc_zh/zh-cn_topic_0073679956.html -->
+			<groupId>com.huawei.storage</groupId>
+			<artifactId>esdk-obs-java</artifactId>
+			<version>${esdk-obs-java}</version> <!-- $NO-MVN-MAN-VER$ -->
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+		</dependency>
+	</dependencies>
+
+</project>

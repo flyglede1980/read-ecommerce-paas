@@ -1,0 +1,11 @@
+net\yitun\basic\model\Page.class
+net\yitun\basic\Util.class
+net\yitun\basic\model\Result.class
+net\yitun\basic\dict\Valid.class
+net\yitun\basic\dict\Sex.class
+net\yitun\basic\Code.class
+net\yitun\basic\dict\Status.class
+net\yitun\basic\dict\YesNo.class
+net\yitun\basic\model\PageResult.class
+net\yitun\basic\model\vo\DeleteVo.class
+net\yitun\basic\dict\Dict.class

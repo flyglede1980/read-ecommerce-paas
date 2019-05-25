@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="basic.amqp" />
+        <module name="basic.cache" />
+        <module name="basic.core" />
+        <module name="basic.model" />
+        <module name="basic.mybatis" />
+        <module name="basic.security" />
+        <module name="basic.swagger" />
+        <module name="basic.website" />
+        <module name="boot" />
+        <module name="cloud.consul" />
+        <module name="cloud.eureka" />
+        <module name="cloud.gateway" />
+        <module name="domain.api" />
+        <module name="domain.service" />
+        <module name="domains.comon.api" />
+        <module name="domains.comon.service" />
+        <module name="ioften.adv.api" />
+        <module name="ioften.adv.service" />
+        <module name="ioften.basic" />
+        <module name="ioften.cms.api" />
+        <module name="ioften.cms.service" />
+        <module name="ioften.crm.api" />
+        <module name="ioften.crm.service" />
+        <module name="ioften.mall.api" />
+        <module name="ioften.mall.service" />
+        <module name="ioften.order.api" />
+        <module name="ioften.order.service" />
+        <module name="ioften.pay.api" />
+        <module name="ioften.pay.service" />
+        <module name="ioften.startup" />
+        <module name="ioften.sys.api" />
+        <module name="ioften.sys.service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="basic" target="1.8" />
+      <module name="basic.amqp" target="1.8" />
+      <module name="basic.cache" target="1.8" />
+      <module name="basic.core" target="1.8" />
+      <module name="basic.model" target="1.8" />
+      <module name="basic.mybatis" target="1.8" />
+      <module name="basic.security" target="1.8" />
+      <module name="basic.swagger" target="1.8" />
+      <module name="basic.website" target="1.8" />
+      <module name="boot" target="1.8" />
+      <module name="cloud" target="1.8" />
+      <module name="cloud.consul" target="1.8" />
+      <module name="cloud.eureka" target="1.8" />
+      <module name="cloud.gateway" target="1.8" />
+      <module name="domain" target="1.8" />
+      <module name="domain.api" target="1.8" />
+      <module name="domain.ioften" target="1.8" />
+      <module name="domain.service" target="1.8" />
+      <module name="domains" target="1.8" />
+      <module name="domains.comon.api" target="1.8" />
+      <module name="domains.comon.service" target="1.8" />
+      <module name="ioften.adv.api" target="1.8" />
+      <module name="ioften.adv.service" target="1.8" />
+      <module name="ioften.api" target="1.8" />
+      <module name="ioften.basic" target="1.8" />
+      <module name="ioften.cms.api" target="1.8" />
+      <module name="ioften.cms.service" target="1.8" />
+      <module name="ioften.crm.api" target="1.8" />
+      <module name="ioften.crm.service" target="1.8" />
+      <module name="ioften.mall.api" target="1.8" />
+      <module name="ioften.mall.service" target="1.8" />
+      <module name="ioften.order.api" target="1.8" />
+      <module name="ioften.order.service" target="1.8" />
+      <module name="ioften.pay.api" target="1.8" />
+      <module name="ioften.pay.service" target="1.8" />
+      <module name="ioften.service" target="1.8" />
+      <module name="ioften.startup" target="1.8" />
+      <module name="ioften.sys.api" target="1.8" />
+      <module name="ioften.sys.service" target="1.8" />
+      <module name="yitun" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

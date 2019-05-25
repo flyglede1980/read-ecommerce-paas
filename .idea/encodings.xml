@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/basic" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/basic/basic.amqp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/basic/basic.cache" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/basic/basic.core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/basic/basic.model" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/basic/basic.mybatis" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/basic/basic.security" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/basic/basic.swagger" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/basic/basic.website" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/boot" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud/cloud.consul" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud/cloud.eureka" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud/cloud.gateway" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/domain" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/domain.ioften" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/domain.ioften/ioften.api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/domain.ioften/ioften.api/ioften.adv.api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/domain.ioften/ioften.api/ioften.cms.api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/domain.ioften/ioften.api/ioften.crm.api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/domain.ioften/ioften.api/ioften.mall.api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/domain.ioften/ioften.api/ioften.order.api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/domain.ioften/ioften.api/ioften.pay.api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/domain.ioften/ioften.api/ioften.sys.api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/domain.ioften/ioften.basic" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/domain.ioften/ioften.service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/domain.ioften/ioften.service/ioften.adv.service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/domain.ioften/ioften.service/ioften.cms.service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/domain.ioften/ioften.service/ioften.crm.service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/domain.ioften/ioften.service/ioften.mall.service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/domain.ioften/ioften.service/ioften.order.service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/domain.ioften/ioften.service/ioften.pay.service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/domain.ioften/ioften.service/ioften.sys.service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/domain.ioften/ioften.startup" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/domain/domain.api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/domain/domain.service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/domain/domains" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/domain/domains/domains.comon.api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/domain/domains/domains.comon.service" charset="UTF-8" />
+  </component>
+</project>

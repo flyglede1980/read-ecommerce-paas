@@ -1,0 +1,9 @@
+# Spring
+spring:
+  profiles:
+    active: dev
+#    active: test
+#    active: prod
+
+  application:
+    name: consul.cloud

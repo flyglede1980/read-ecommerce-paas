@@ -1,0 +1,130 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "net.yitun.comon.conf.CodeConfig",
+      "name": "basic.code",
+      "type": "net.yitun.comon.conf.CodeConfig"
+    },
+    {
+      "sourceType": "net.yitun.comon.conf.ObsConfig",
+      "name": "basic.store.obs",
+      "type": "net.yitun.comon.conf.ObsConfig"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "net.yitun.comon.conf.CodeConfig",
+      "defaultValue": 6,
+      "name": "basic.code.img-len",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "net.yitun.comon.conf.CodeConfig",
+      "defaultValue": 2,
+      "name": "basic.code.img-rate",
+      "type": "java.lang.Long"
+    },
+    {
+      "sourceType": "net.yitun.comon.conf.CodeConfig",
+      "defaultValue": 120,
+      "name": "basic.code.img-t-t-l",
+      "type": "java.lang.Long"
+    },
+    {
+      "sourceType": "net.yitun.comon.conf.CodeConfig",
+      "defaultValue": 3,
+      "name": "basic.code.sms-fire-lock-times",
+      "type": "java.lang.Long"
+    },
+    {
+      "sourceType": "net.yitun.comon.conf.CodeConfig",
+      "defaultValue": 1,
+      "name": "basic.code.sms-ignore-verify-times",
+      "type": "java.lang.Long"
+    },
+    {
+      "sourceType": "net.yitun.comon.conf.CodeConfig",
+      "defaultValue": 4,
+      "name": "basic.code.sms-len",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "net.yitun.comon.conf.CodeConfig",
+      "defaultValue": 3600,
+      "name": "basic.code.sms-lock-t-t-l",
+      "type": "java.lang.Long"
+    },
+    {
+      "sourceType": "net.yitun.comon.conf.CodeConfig",
+      "defaultValue": 30,
+      "name": "basic.code.sms-rate",
+      "type": "java.lang.Long"
+    },
+    {
+      "sourceType": "net.yitun.comon.conf.CodeConfig",
+      "defaultValue": 300,
+      "name": "basic.code.sms-t-t-l",
+      "type": "java.lang.Long"
+    },
+    {
+      "sourceType": "net.yitun.comon.conf.CodeConfig",
+      "defaultValue": "【XXX】您的验证码为：%s，切勿泄露于他人。",
+      "name": "basic.code.sms-tmpl",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "net.yitun.comon.conf.CodeConfig",
+      "name": "basic.code.unit",
+      "type": "java.util.concurrent.TimeUnit"
+    },
+    {
+      "sourceType": "net.yitun.comon.conf.ObsConfig",
+      "name": "basic.store.obs.access-key",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "net.yitun.comon.conf.ObsConfig",
+      "name": "basic.store.obs.access-secret",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "net.yitun.comon.conf.ObsConfig",
+      "defaultValue": "priv",
+      "name": "basic.store.obs.bucket",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "net.yitun.comon.conf.ObsConfig",
+      "name": "basic.store.obs.endpoint",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "net.yitun.comon.conf.ObsConfig",
+      "name": "basic.store.obs.pub-access-key",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "net.yitun.comon.conf.ObsConfig",
+      "name": "basic.store.obs.pub-access-secret",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "net.yitun.comon.conf.ObsConfig",
+      "defaultValue": "pub",
+      "name": "basic.store.obs.pub-bucket",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "net.yitun.comon.conf.ObsConfig",
+      "name": "basic.store.obs.pub-endpoint",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "net.yitun.comon.conf.ObsConfig",
+      "defaultValue": "https",
+      "name": "basic.store.obs.schema",
+      "type": "java.lang.String"
+    }
+  ]
+}

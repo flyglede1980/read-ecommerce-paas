@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/basic/basic.iml" filepath="$PROJECT_DIR$/basic/basic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/basic/basic.amqp/basic.amqp.iml" filepath="$PROJECT_DIR$/basic/basic.amqp/basic.amqp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/basic/basic.cache/basic.cache.iml" filepath="$PROJECT_DIR$/basic/basic.cache/basic.cache.iml" />
+      <module fileurl="file://$PROJECT_DIR$/basic/basic.core/basic.core.iml" filepath="$PROJECT_DIR$/basic/basic.core/basic.core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/basic/basic.model/basic.model.iml" filepath="$PROJECT_DIR$/basic/basic.model/basic.model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/basic/basic.mybatis/basic.mybatis.iml" filepath="$PROJECT_DIR$/basic/basic.mybatis/basic.mybatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/basic/basic.security/basic.security.iml" filepath="$PROJECT_DIR$/basic/basic.security/basic.security.iml" />
+      <module fileurl="file://$PROJECT_DIR$/basic/basic.swagger/basic.swagger.iml" filepath="$PROJECT_DIR$/basic/basic.swagger/basic.swagger.iml" />
+      <module fileurl="file://$PROJECT_DIR$/basic/basic.website/basic.website.iml" filepath="$PROJECT_DIR$/basic/basic.website/basic.website.iml" />
+      <module fileurl="file://$PROJECT_DIR$/boot/boot.iml" filepath="$PROJECT_DIR$/boot/boot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud/cloud.iml" filepath="$PROJECT_DIR$/cloud/cloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud/cloud.consul/cloud.consul.iml" filepath="$PROJECT_DIR$/cloud/cloud.consul/cloud.consul.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud/cloud.eureka/cloud.eureka.iml" filepath="$PROJECT_DIR$/cloud/cloud.eureka/cloud.eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud/cloud.gateway/cloud.gateway.iml" filepath="$PROJECT_DIR$/cloud/cloud.gateway/cloud.gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/domain/domain.iml" filepath="$PROJECT_DIR$/domain/domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/domain/domain.api/domain.api.iml" filepath="$PROJECT_DIR$/domain/domain.api/domain.api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/domain.ioften/domain.ioften.iml" filepath="$PROJECT_DIR$/domain.ioften/domain.ioften.iml" />
+      <module fileurl="file://$PROJECT_DIR$/domain/domain.service/domain.service.iml" filepath="$PROJECT_DIR$/domain/domain.service/domain.service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/domain/domains/domains.iml" filepath="$PROJECT_DIR$/domain/domains/domains.iml" />
+      <module fileurl="file://$PROJECT_DIR$/domain/domains/domains.comon.api/domains.comon.api.iml" filepath="$PROJECT_DIR$/domain/domains/domains.comon.api/domains.comon.api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/domain/domains/domains.comon.service/domains.comon.service.iml" filepath="$PROJECT_DIR$/domain/domains/domains.comon.service/domains.comon.service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/domain.ioften/ioften.api/ioften.adv.api/ioften.adv.api.iml" filepath="$PROJECT_DIR$/domain.ioften/ioften.api/ioften.adv.api/ioften.adv.api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/domain.ioften/ioften.service/ioften.adv.service/ioften.adv.service.iml" filepath="$PROJECT_DIR$/domain.ioften/ioften.service/ioften.adv.service/ioften.adv.service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/domain.ioften/ioften.api/ioften.api.iml" filepath="$PROJECT_DIR$/domain.ioften/ioften.api/ioften.api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/domain.ioften/ioften.basic/ioften.basic.iml" filepath="$PROJECT_DIR$/domain.ioften/ioften.basic/ioften.basic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/domain.ioften/ioften.api/ioften.cms.api/ioften.cms.api.iml" filepath="$PROJECT_DIR$/domain.ioften/ioften.api/ioften.cms.api/ioften.cms.api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/domain.ioften/ioften.service/ioften.cms.service/ioften.cms.service.iml" filepath="$PROJECT_DIR$/domain.ioften/ioften.service/ioften.cms.service/ioften.cms.service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/domain.ioften/ioften.api/ioften.crm.api/ioften.crm.api.iml" filepath="$PROJECT_DIR$/domain.ioften/ioften.api/ioften.crm.api/ioften.crm.api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/domain.ioften/ioften.service/ioften.crm.service/ioften.crm.service.iml" filepath="$PROJECT_DIR$/domain.ioften/ioften.service/ioften.crm.service/ioften.crm.service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/domain.ioften/ioften.api/ioften.mall.api/ioften.mall.api.iml" filepath="$PROJECT_DIR$/domain.ioften/ioften.api/ioften.mall.api/ioften.mall.api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/domain.ioften/ioften.service/ioften.mall.service/ioften.mall.service.iml" filepath="$PROJECT_DIR$/domain.ioften/ioften.service/ioften.mall.service/ioften.mall.service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/domain.ioften/ioften.api/ioften.order.api/ioften.order.api.iml" filepath="$PROJECT_DIR$/domain.ioften/ioften.api/ioften.order.api/ioften.order.api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/domain.ioften/ioften.service/ioften.order.service/ioften.order.service.iml" filepath="$PROJECT_DIR$/domain.ioften/ioften.service/ioften.order.service/ioften.order.service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/domain.ioften/ioften.api/ioften.pay.api/ioften.pay.api.iml" filepath="$PROJECT_DIR$/domain.ioften/ioften.api/ioften.pay.api/ioften.pay.api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/domain.ioften/ioften.service/ioften.pay.service/ioften.pay.service.iml" filepath="$PROJECT_DIR$/domain.ioften/ioften.service/ioften.pay.service/ioften.pay.service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/domain.ioften/ioften.service/ioften.service.iml" filepath="$PROJECT_DIR$/domain.ioften/ioften.service/ioften.service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/domain.ioften/ioften.startup/ioften.startup.iml" filepath="$PROJECT_DIR$/domain.ioften/ioften.startup/ioften.startup.iml" />
+      <module fileurl="file://$PROJECT_DIR$/domain.ioften/ioften.api/ioften.sys.api/ioften.sys.api.iml" filepath="$PROJECT_DIR$/domain.ioften/ioften.api/ioften.sys.api/ioften.sys.api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/domain.ioften/ioften.service/ioften.sys.service/ioften.sys.service.iml" filepath="$PROJECT_DIR$/domain.ioften/ioften.service/ioften.sys.service/ioften.sys.service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yitun.iml" filepath="$PROJECT_DIR$/yitun.iml" />
+    </modules>
+  </component>
+</project>

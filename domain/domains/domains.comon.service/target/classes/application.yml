@@ -1,0 +1,44 @@
+
+# basic
+basic:
+  sms:  # 短信
+    yunpian: # 云片短信
+      host: https://sms.yunpian.com/v2/sms/single_send.json
+      apikey: 583863ef15171fb3ecbafa2c353e025d
+
+  qrcode: # 二维码LOGO
+    logo-path: static/logo_qrcode.png
+      
+  store: # 云存储
+    bucket: cj-tmp  # 临时桶
+    priv-classify: my,idcard,evidence # 属于私密对象
+    expire-time: 30 # 临时URL过期时间, 默认: 30s
+    resure-times: 1 # 临时文件重复确认次数，默认: 1
+    oss: # 阿里云
+      bucket: cj-priv       # 私密桶    
+    obs: # 华为云
+      bucket: cj-priv       # 私密桶
+      endpoint: obs.cn-north-1.myhwclouds.com
+      access-key: WEBNRIMVFF8GD8XLQLCC
+      access-secret: 6r2rCzcoo4PBbyIbGjkSdwQAR9Ho0EhJOJ6lV2bg
+#      access-key: 1ZHRTN5EYKNHHEKLF13T
+#      access-secret: bZaRFLAcynd7Ca5nbVT7IlmXyHx9IDFPmdQksMZ7
+      pub-bucket: cj-pub    # 公共桶
+      pub-endpoint: ${basic.store.obs.endpoint}
+      pub-access-key: ${basic.store.obs.access-key}
+      pub-access-secret: ${basic.store.obs.access-secret}
+      
+  code: # 验证码
+    img:    # 图片验证码
+    img-len: 6    # 字符长度, 默认: 6
+    img-ttl: 120  # 缓存有效期, 默认: 120s
+    img-rate: 2   # 刷新频率, 默认: 2秒/次
+    sms:    # 短信验证码
+    sms-len: 4    # 字符长度, 默认: 4
+    sms-ttl: 300  # 缓存有效期, 默认: 300s
+    sms-rate: 30  # 发送频率, 默认: 30秒/条
+    sms-lock-ttl: 3600    # 黑名单锁定时长, 默认: 3600s
+    sms-fire-lock-times: 3    # 累计触发锁定次数, 默认: 3
+    sms-ignore-verify-times: 1    # 忽略图形验证次数, 默认: 1
+    sms-tmpl: 【XXX】您的验证码为：%s，切勿泄露于他人。  # 短信验证码模板
+    

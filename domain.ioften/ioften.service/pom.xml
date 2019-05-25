@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<parent>
+		<groupId>net.yitun</groupId>
+		<artifactId>domain.ioften</artifactId>
+		<version>0.0.1</version>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>ioften.service</artifactId>
+	<packaging>pom</packaging>
+	<description>ioften domain.service modules</description>
+
+	<modules>
+		<module>ioften.sys.service</module>
+		<module>ioften.adv.service</module>
+		<module>ioften.pay.service</module>
+		<module>ioften.crm.service</module>
+		<module>ioften.cms.service</module>
+		<module>ioften.mall.service</module>
+        <module>ioften.order.service</module>
+    </modules>
+
+	<dependencies>
+		<dependency>
+			<groupId>net.yitun</groupId>
+			<artifactId>ioften.basic</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>net.yitun</groupId>
+			<artifactId>basic.cache</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>net.yitun</groupId>
+			<artifactId>basic.mybatis</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>net.yitun</groupId>
+			<artifactId>basic.security</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>net.yitun</groupId>
+			<artifactId>domain.service</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+	</dependencies>
+
+</project>

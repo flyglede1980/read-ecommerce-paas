@@ -1,0 +1,111 @@
+# Server
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+# Spring
+spring:
+  redis: # Redis
+    port: 6379
+    host: redis.ytdev.org
+    password: 123456
+    timeout: 300s
+    database: 0
+  cache:
+    redis:
+      time-to-live: 72H
+
+  rabbitmq: # MQ
+    port: 5672
+    host: rabbitmq.ytdev.org
+    username: dev
+    password: 123456
+    virtual-host: /dev
+    publisher-confirms: false
+    listener:
+      direct:
+        acknowledge-mode: MANUAL
+      simple:
+        acknowledge-mode: MANUAL
+
+  datasource: # DS
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://mysql.ytdev.org.yitun.net:3306/ioften?serverTimezone=PRC&useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&rewriteBatchedStatements=true&autoReconnct=true&autoReconnectForPools=true&useSSL=false
+    username: dev
+    password: 123456
+    hikari:
+      pool-name: RWDB
+      minimum-idle: 4
+      maximum-pool-size: 32
+      idle-timeout: 30000
+      max-lifetime: 1800000
+      connection-timeout: 30000
+      connection-test-query: select 1
+
+# Mybatis
+mybatis:
+  configuration:
+    cache-enabled: true
+    default-statement-timeout: 300 # 事务超时时长
+    map-underscore-to-camel-case: true
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: net.yitun.entity, net.yitun.**.entity
+  
+# Pagehelper
+pagehelper:
+  helper-dialect: mysql
+  params: count=count;orderBy=sortBy;pageNum=pageNo;pageSize=pageSize
+
+# Logging
+logging:
+  pattern:
+    level: "[%5p]"
+    dateformat: "[MM-dd HH:mm:ss.SSS]"
+  level:
+    net:
+      yitun: DEBUG
+    org:
+      springframework: INFO
+#    com:
+#      obs: ERROR
+    root: INFO
+
+# basic
+basic:
+  sms:  # 短信
+    yunpian: # 云片短信
+      host: https://sms.yunpian.com/v2/sms/single_send.json
+      apikey: 583863ef15171fb3ecbafa2c353e025d
+
+  qrcode: # 二维码LOGO
+    logo-path: static/logo_qrcode.png
+
+  store: # 云存储
+    bucket: cj-tmp  # 临时目录
+    priv-classify: my,idcard,evidence # 属于私密对象
+    expire-time: 30 # 临时URL过期时间, 默认: 30s
+    resure-times: 1 # 临时文件重复确认次数，默认: 1
+    obs: # 华为云
+      bucket: cj-priv       # 私密桶
+      endpoint: obs.cn-north-1.myhwclouds.com
+      access-key: WEBNRIMVFF8GD8XLQLCC
+      access-secret: 6r2rCzcoo4PBbyIbGjkSdwQAR9Ho0EhJOJ6lV2bg
+      pub-bucket: cj-pub    # 公共桶
+      pub-endpoint: ${basic.store.obs.endpoint}
+      pub-access-key: ${basic.store.obs.access-key}
+      pub-access-secret: ${basic.store.obs.access-secret}
+
+  code: # 验证码
+    img-len: 6    # 字符长度, 默认: 6
+    img-ttl: 120  # 缓存有效期, 默认: 120s
+    img-rate: 2   # 刷新频率, 默认: 2秒/次
+    sms-len: 4    # 字符长度, 默认: 4
+    sms-ttl: 300  # 缓存有效期, 默认: 300s
+    sms-rate: 30  # 发送频率, 默认: 30秒/条
+    sms-lock-ttl: 7200    # 黑名单锁定时长, 默认: 7200s
+    sms-fire-lock-times: 10   # 累计触发锁定次数, 默认: 5
+    sms-ignore-verify-times: 2    # 忽略图形验证次数, 默认: 2
+    sms-tmpl: 【XXXX】您的验证码为：%s，请按页面提示填写，切勿泄露于他人。  # 短信验证码模板
+

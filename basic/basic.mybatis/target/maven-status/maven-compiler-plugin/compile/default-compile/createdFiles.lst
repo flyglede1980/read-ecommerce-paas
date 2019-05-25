@@ -1,0 +1,3 @@
+net\yitun\basic\mybatis\support\EnumAutoTypeHandler.class
+net\yitun\basic\mybatis\conf\aop\PageAspect.class
+net\yitun\basic\mybatis\conf\MybatisConfig.class

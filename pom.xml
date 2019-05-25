@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.0.6.RELEASE</version>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>net.yitun</groupId>
+	<artifactId>yitun</artifactId>
+	<packaging>pom</packaging>
+	<version>0.0.1</version>
+	<description>yitun.net platform</description>
+	<url>http://mvn.yitun.net</url>
+	<inceptionYear>2018</inceptionYear>
+
+	<organization>
+		<name>ytdev.org</name>
+		<url>http://ytdev.org</url>
+	</organization>
+	<ciManagement>
+		<system>jenkins</system>
+		<url>http://jenkins.yitun.net</url>
+	</ciManagement>
+	<issueManagement>
+		<system>issues</system>
+		<url>http://issues.yitun.net</url>
+	</issueManagement>
+
+	<repositories>
+		<repository>
+			<id>nexus-public</id>
+			<url>http://mvn.ytdev.org/repository/maven-public/</url>
+		</repository>
+		<repository>
+			<id>nexus-releases</id>
+			<url>http://mvn.ytdev.org/repository/maven-releases/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>nexus-snapshots</id>
+			<url>http://mvn.ytdev.org/repository/maven-snapshots/</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+
+	<distributionManagement>
+		<repository>
+			<id>maven-releases</id>
+			<name>maven-releases</name>
+			<url>http://mvn.yitun.net:8081/repository/maven-releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>maven-snapshots</id>
+			<name>maven-snapshots</name>
+			<url>http://mvn.yitun.net:8081/repository/maven-snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+	<modules>
+		<module>boot</module>
+		<module>basic</module>
+		<module>cloud</module>
+		<module>domain</module>
+		<module>domain.ioften</module>
+	</modules>
+
+	<properties>
+		<junit>4.12</junit>
+		<servlet>2.5</servlet>
+		<lombok>1.18.4</lombok>
+
+		<jjwt>0.9.1</jjwt>
+		<kryo>4.0.2</kryo>
+		<zxing>3.3.3</zxing>
+		<jackson>2.9.7</jackson>
+		<swagger>1.5.21</swagger>
+		<swagger-ui>2.9.2</swagger-ui>
+		<validation-api>2.0.1.Final</validation-api>
+
+		<slf4j>1.7.25</slf4j>
+		<okhttp>3.12.0</okhttp>
+		<kaptcha>2.3.2</kaptcha>
+		<fastjson>1.2.54</fastjson>
+		<esdk-obs-java>3.0.1</esdk-obs-java>
+		<commons-lang3>3.8.1</commons-lang3>
+		<yunpian-java-sdk>1.2.7</yunpian-java-sdk>
+
+		<hikaricp>3.2.0</hikaricp>
+		<mysql-connector>8.0.13</mysql-connector>
+		<spring-boot.mybatis>1.3.2</spring-boot.mybatis>
+		<spring-boot.pagehelper>1.2.10</spring-boot.pagehelper>
+
+		<spring.version>5.0.10.RELEASE</spring.version> <!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
+		<spring-boot.version>2.0.6.RELEASE</spring-boot.version> <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot -->
+		<spring-cloud.version>Finchley.SR1</spring-cloud.version>
+
+		<java.version>1.8</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+	</properties>
+
+	<dependencies>
+		<dependency> <!-- https://mvnrepository.com/artifact/junit/junit -->
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit}</version> <!-- $NO-MVN-MAN-VER$ -->
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency> <!-- https://mvnrepository.com/artifact/javax.servlet/servlet-api -->
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>${servlet}</version> <!-- $NO-MVN-MAN-VER$ -->
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency> <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>${lombok}</version> <!-- $NO-MVN-MAN-VER$ -->
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.alipay</groupId>
+			<artifactId>sdk-java</artifactId>
+			<version>20190112</version>
+		</dependency>
+	</dependencies>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency> <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>${slf4j}</version> <!-- $NO-MVN-MAN-VER$ -->
+			</dependency>
+
+			<dependency> <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+				<groupId>com.alibaba</groupId>
+				<artifactId>fastjson</artifactId>
+				<version>${fastjson}</version> <!-- $NO-MVN-MAN-VER$ -->
+			</dependency>
+
+			<dependency> <!-- https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt -->
+				<groupId>io.jsonwebtoken</groupId>
+				<artifactId>jjwt</artifactId>
+				<version>${jjwt}</version> <!-- $NO-MVN-MAN-VER$ -->
+			</dependency>
+
+			<dependency> <!-- https://mvnrepository.com/artifact/com.google.zxing/core -->
+				<groupId>com.google.zxing</groupId>
+				<artifactId>core</artifactId>
+				<version>${zxing}</version> <!-- $NO-MVN-MAN-VER$ -->
+			</dependency>
+
+			<dependency> <!-- https://mvnrepository.com/artifact/com.esotericsoftware/kryo -->
+				<groupId>com.esotericsoftware</groupId>
+				<artifactId>kryo</artifactId>
+				<version>${kryo}</version> <!-- $NO-MVN-MAN-VER$ -->
+			</dependency>
+
+			<dependency> <!-- https://mvnrepository.com/artifact/javax.validation/validation-api -->
+				<groupId>javax.validation</groupId>
+				<artifactId>validation-api</artifactId>
+				<version>${validation-api}</version> <!-- $NO-MVN-MAN-VER$ -->
+			</dependency>
+
+			<dependency> <!-- https://mvnrepository.com/artifact/com.zaxxer/HikariCP -->
+				<groupId>com.zaxxer</groupId>
+				<artifactId>HikariCP</artifactId>
+				<version>${hikaricp}</version> <!-- $NO-MVN-MAN-VER$ -->
+			</dependency>
+
+			<dependency> <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<version>${mysql-connector}</version> <!-- $NO-MVN-MAN-VER$ -->
+			</dependency>
+
+			<dependency> <!-- https://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp -->
+				<groupId>com.squareup.okhttp3</groupId>
+				<artifactId>okhttp</artifactId>
+				<version>${okhttp}</version> <!-- $NO-MVN-MAN-VER$ -->
+			</dependency>
+
+			<dependency> <!-- https://mvnrepository.com/artifact/com.google.code.kaptcha/kaptcha -->
+				<groupId>com.google.code.kaptcha</groupId>
+				<artifactId>kaptcha</artifactId>
+				<version>${kaptcha}</version> <!-- $NO-MVN-MAN-VER$ -->
+			</dependency>
+
+			<dependency> <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-annotations -->
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-annotations</artifactId>
+				<version>${jackson}</version> <!-- $NO-MVN-MAN-VER$ -->
+			</dependency>
+
+			<dependency> <!-- https://mvnrepository.com/artifact/io.swagger/swagger-models -->
+				<groupId>io.swagger</groupId>
+				<artifactId>swagger-models</artifactId>
+				<version>${swagger}</version> <!-- $NO-MVN-MAN-VER$ -->
+			</dependency>
+			<dependency> <!-- https://mvnrepository.com/artifact/io.swagger/swagger-annotations -->
+				<groupId>io.swagger</groupId>
+				<artifactId>swagger-annotations</artifactId>
+				<version>${swagger}</version> <!-- $NO-MVN-MAN-VER$ -->
+			</dependency>
+			<dependency> <!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger2 -->
+				<groupId>io.springfox</groupId>
+				<artifactId>springfox-swagger2</artifactId>
+				<version>${swagger-ui}</version> <!-- $NO-MVN-MAN-VER$ -->
+			</dependency>
+			<dependency> <!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui -->
+				<groupId>io.springfox</groupId>
+				<artifactId>springfox-swagger-ui</artifactId>
+				<version>${swagger-ui}</version> <!-- $NO-MVN-MAN-VER$ -->
+			</dependency>
+
+			<dependency> <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-lang3</artifactId>
+				<version>${commons-lang3}</version> <!-- $NO-MVN-MAN-VER$ -->
+			</dependency>
+
+			<dependency> <!-- https://mvnrepository.com/artifact/org.mybatis.spring.boot/mybatis-spring-boot-starter -->
+				<groupId>org.mybatis.spring.boot</groupId>
+				<artifactId>mybatis-spring-boot-starter</artifactId>
+				<version>${spring-boot.mybatis}</version> <!-- $NO-MVN-MAN-VER$ -->
+			</dependency>
+
+			<dependency> <!-- https://mvnrepository.com/artifact/com.github.pagehelper/pagehelper-spring-boot-starter -->
+				<groupId>com.github.pagehelper</groupId>
+				<artifactId>pagehelper-spring-boot-starter</artifactId>
+				<version>${spring-boot.pagehelper}</version> <!-- $NO-MVN-MAN-VER$ -->
+			</dependency>
+
+			<dependency> <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-configuration-processor -->
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-configuration-processor</artifactId>
+				<version>${spring-boot.version}</version> <!-- $NO-MVN-MAN-VER$ -->
+			</dependency>
+
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<configuration>
+					<skipTests>true</skipTests>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<target>${java.version}</target>
+					<source>${java.version}</source>
+					<encoding>${project.build.sourceEncoding}</encoding>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<configuration>
+					<attach>true</attach>
+				</configuration>
+				<executions>
+					<execution>
+						<phase>compile</phase>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>

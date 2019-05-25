@@ -1,4 +1,4 @@
 # ioften.yitun.net
 
 #### 项目介绍
-长见APP服务接口
+长鉴阅读+分享类APP服务接口

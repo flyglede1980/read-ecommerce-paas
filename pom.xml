@@ -77,7 +77,7 @@
 	</modules>
 
 	<properties>
-		<junit>4.12</junit>
+		<junit>4.13.1</junit>
 		<servlet>2.5</servlet>
 		<lombok>1.18.4</lombok>
 

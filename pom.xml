@@ -92,7 +92,7 @@
 		<slf4j>1.7.25</slf4j>
 		<okhttp>3.12.0</okhttp>
 		<kaptcha>2.3.2</kaptcha>
-		<fastjson>1.2.54</fastjson>
+		<fastjson>1.2.83</fastjson>
 		<esdk-obs-java>3.0.1</esdk-obs-java>
 		<commons-lang3>3.8.1</commons-lang3>
 		<yunpian-java-sdk>1.2.7</yunpian-java-sdk>
